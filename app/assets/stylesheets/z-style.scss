@@ -1,0 +1,101 @@
+header {
+  .phone {
+    border: 0px solid red;
+    text-align: right;
+    color: #999999;
+    font-weight: bold;
+    font-size: 2.2em;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .fa-phone, u {
+    color: #47A3DA;
+    text-decoration: none; 
+  }
+}
+.logo {
+  min-width: 300px;
+  min-height: 80px;
+  background-repeat: no-repeat;
+  border: 1px solid white;
+}
+
+.social {
+  //border: 1px solid red;
+  width: 100%;
+  div {
+    display: block;
+    float: right;
+    margin-left: 4px; 
+  }
+  a {
+    font-size: 1.7em;
+  }
+  i {
+    text-align: center;
+    margin-top: 1px;
+    display: block;
+    color: #47A3DA;
+  }
+  i:hover, i:after {
+    color: white;
+  }
+
+  //fix insta top
+  .fa-instagram {
+    margin-top: 2px;
+  }
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  RESPONSIVE STYLES
+/*-----------------------------------------------------------------------------------*/
+
+/* -- LOGO -- */
+@media screen and (max-width: 1000px) {
+  header {
+    .phone {
+      font-size: 2.0em;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    .phone {
+      margin: 80px 0 10px;
+    }
+  }
+  .cbp-hrmenu {
+    margin-top: -20px;
+  }
+}
+@media screen and (max-width: 460px) {
+  header {
+    .phone {
+      font-size: 1.5em;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  header {
+    padding: 0 !important;
+  }
+  .logo {
+    margin: 10px 0 0px 25px;
+    background-size: 80%;
+    min-height: 70px;
+    min-width: 235px;
+  }
+  .cbp-hrmenu {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 310px) {
+  .logo {
+    background-size: 99%;
+    margin: 10px 0 0px 0px;
+  }
+}/* -- //LOGO -- */
+

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @page.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @page.description %>
+</p>
+
+<p>
+  <strong>Slave:</strong>
+  <%= @page.slave %>
+</p>
+
+<p>
+  <strong>Image uid:</strong>
+  <%= @page.image_uid %>
+</p>
+
+<p>
+  <strong>Image name:</strong>
+  <%= @page.image_name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @page.url %>
+</p>
+
+<p>
+  <strong>Sort:</strong>
+  <%= @page.sort %>
+</p>
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>
