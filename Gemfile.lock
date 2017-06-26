@@ -79,8 +79,6 @@ GEM
     execjs (2.7.0)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
-    font-awesome-sass (4.7.0)
-      sass (>= 3.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     haml (5.0.1)
@@ -225,7 +223,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.1.0)
   dragonfly (~> 1.1.1)
-  font-awesome-sass
+  font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
   paperclip

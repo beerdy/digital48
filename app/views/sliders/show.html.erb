@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @slider.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @slider.description %>
+</p>
+
+<p>
+  <strong>Slave:</strong>
+  <%= @slider.slave %>
+</p>
+
+<p>
+  <strong>Image uid:</strong>
+  <%= @slider.image_uid %>
+</p>
+
+<p>
+  <strong>Image name:</strong>
+  <%= @slider.image_name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @slider.url %>
+</p>
+
+<p>
+  <strong>Sort:</strong>
+  <%= @slider.sort %>
+</p>
+
+<%= link_to 'Edit', edit_slider_path(@slider) %> |
+<%= link_to 'Back', sliders_path %>

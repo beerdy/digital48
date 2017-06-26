@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sliders
   mount Rich::Engine => '/rich', :as => 'rich'
   resources :pages
   resources :contents

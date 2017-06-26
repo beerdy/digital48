@@ -6,16 +6,16 @@
             background-image: url(<%=@logo.image.url%>);
           }
         </style>
-        <div class="logo">
-        <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i> 7 <u>(</u>4742<u>)</u> 35 63 10</div>
-        </div>
-        <nav class="social">
-          <div><a href=""><i class="fa fa-vk" aria-hidden="true"></i></a></div>
-          <div><a href=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></div>
-          <div><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
-        </nav>
+          <div class="logo">
+            <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i> 7 <u>(</u>4742<u>)</u> 35 63 10</div>
+          </div>
+          <nav class="social">
+            <div><a href=""><i class="fa fa-vk" aria-hidden="true"></i></a></div>
+            <div><a href=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></div>
+            <div><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+          </nav>
       </header> 
-      <div class="main">
+      <div class="main" id="mainmenu">
         <nav id="cbp-hrmenu" class="cbp-hrmenu">
           <ul>
             <li>
@@ -25,14 +25,9 @@
                   <div>
                     <h4>Общая информация</h4>
                     <ul>
-                      <li><a href="#">Новости</a></li>
+                      <li><a href="#">О компании</a></li>
+                      <li><a href="#">Реквезиты</a></li>
                       <li><a href="#">Отзывы</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4>Работа</h4>
-                    <ul>
-                      <li><a href="#">Вакансии</a></li>
                     </ul>
                     <h4>Сотрудничество</h4>
                     <ul>
@@ -40,36 +35,59 @@
                     </ul>
                   </div>
                   <div>
+                    <h4>Квалификация</h4>
+                    <ul>
+                      <li><a href="#">Сертификаты компании</a></li>
+                      <li><a href="#">Сертификаты инженеров</a></li>
+                      <li><a href="#">Прочие документы</a></li>
+                    </ul>
+                    <h4>Обратная связь</h4>
+                      <ul>
+                        <li><a href="#">Контакты & Местоположение</a></li>
+                      </ul>
+                  </div>
+                  <div>
                     <h4>Портфолио</h4>
                     <ul>
                       <li><a href="#">Реализованные проекты</a></li>
+                      <li><a href="#">Наши клиенты</a></li>
                     </ul>
                   </div>
                 </div><!-- /cbp-hrsub-inner -->
               </div><!-- /cbp-hrsub -->
             </li>
             <li>
-              <a href="#">Решения Для Бизнеса</a>
+              <a href="#">ИТ Аутсорсинг</a>
               <div class="cbp-hrsub">
                 <div class="cbp-hrsub-inner">
                   <div>
-                    <h4>Консалтинг &amp; Контроль</h4>
+                    <h4>Офисная оргтехника</h4>
                     <ul>
-                      <li><a href="#">Консалтинг офисной техники</a></li>
-                      <li><a href="#">Контроль и управление печатью</a></li>
+                      <li><a href="#">Обслуживание офисной оргтехники</a></li>
+                      <li><a href="#">Ремонт офисной оргтехники</a></li>
+                      <li><a href="#">Консалтинг по офисной оргтехники</a></li>
                     </ul>
-                    <h4>Обслуживание &amp; Ремонт</h4>
+                    <h4>Персональный Компьютер</h4>
                     <ul>
-                      <li><a href="#">Серверное оборудование</a></li>
-                      <li><a href="#">IT - Аутсорсинг</a></li>
+                      <li><a href="#">Апгрейд парка ПК</a></li>
+                      <li><a href="#">Обслуживание парка ПК</a></li>
+                      <li><a href="#">Консалтинг</a></li>
+                      <li><a href="#">Бесплатная оценка</a></li>
                     </ul>
                   </div>
                   <div>
-                    <h4>Системы Управления Бизнесом</h4>
+                    <h4>Серверное оборудование</h4>
                     <ul>
-                      <li><a href="#">Service Desk</a></li>
-                      <li><a href="#">Red Mine</a></li>
-                  </ul>
+                      <li><a href="#">Консалтинг «Решение под ключ»</a></li>
+                      <li><a href="#">Обслуживание Windows - Систем</a></li>
+                      <li><a href="#">Обслуживание Linux - Систем</a></li>
+                      <li><a href="#">Обслуживание Unix - Систем</a></li>
+                      <li><a href="#">Обслуживание MacX - Систем</a></li>
+                      <li><a href="#">Востановление данных</a></li>
+                      <li><a href="#">Реализация систем архивации</a></li>
+                      <li><a href="#">Защита информации & Безопатность</a></li>
+                      <li><a href="#">Кластеризация</a></li>
+                    </ul>
                   </div>
                   <!--
                   <div>
@@ -88,35 +106,36 @@
               </div><!-- /cbp-hrsub -->
             </li>
             <li>
-              <a href="#">Услуги</a>
+              <a href="#">Частному Лицу</a>
               <div class="cbp-hrsub">
                 <div class="cbp-hrsub-inner"> 
                   <div>
-                    <h4>Learning &amp; Games</h4>
+                    <h4>Компьютерная техника</h4>
                     <ul>
-                      <li><a href="#">Catch the Bullet</a></li>
-                      <li><a href="#">Snoopydoo</a></li>
+                      <li><a href="#">Обслуживание</a></li>
+                      <li><a href="#">Ремонт</a></li>
                     </ul>
-                    <h4>Utilities</h4>
+                    <h4>Смартфоны и планшеты</h4>
                     <ul>
-                      <li><a href="#">Gadget Finder</a></li>
-                      <li><a href="#">Green Tree Express</a></li>
-                      <li><a href="#">Green Tree Pro</a></li>
-                      <li><a href="#">Wobbler 3.0</a></li>
-                      <li><a href="#">Coolkid</a></li>
+                      <li><a href="#">Замена АКБ</a></li>
+                      <li><a href="#">Ремонт Дисплея</a></li>
+                      <li><a href="#">Разблокировка</a></li>
+                      <li><a href="#">Обновление ПО</a></li>
+                      <li><a href="#">Профилактика</a></li>
                     </ul>
                   </div>
                   <div>
-                    <h4>Education</h4>
+                    <h4>Оргтехника</h4>
                     <ul>
-                      <li><a href="#">Learn Thai</a></li>
-                      <li><a href="#">Math Genius</a></li>
-                      <li><a href="#">Chemokid</a></li>
+                      <li><a href="#">Ремонт</a></li>
+                      <li><a href="#">Обслуживание</a></li>
+                      <li><a href="#">Диагностика</a></li>
                     </ul>
-                    <h4>Professionals</h4>
+                    <h4>Расходные материалы</h4>
                     <ul>
-                      <li><a href="#">Success 1.0</a></li>
-                      <li><a href="#">Moneymaker</a></li>
+                      <li><a href="#">Продажа картриджей</a></li>
+                      <li><a href="#">Заправка картриджей</a></li>
+                      <li><a href="#">Ремонт картриджей</a></li>
                     </ul>
                   </div>
                 </div><!-- /cbp-hrsub-inner -->
@@ -157,7 +176,7 @@
               </div><!-- /cbp-hrsub -->
             </li>
             <li>
-              <a href="#">Контакты</a>
+              <a href="#">Аренда техники</a>
               <div class="cbp-hrsub">
                 <div class="cbp-hrsub-inner"> 
                   <div>
@@ -212,40 +231,19 @@
 
 <section id="sliderWrap">
   <div class="container">
-      <div id="metaslider" class="flexslider">
-        <ul class="slides">
-          <li class="flex-active-slide">
-            <img src="https://demo.gridgum.com/wordpress/computer-repair/wp-content/uploads/2014/04/slide1-941x318.png" alt="slide1" class="slider-38 slide-42" draggable="false" width="1170" height="396">
-            <div class="caption-wrap">
-              <div class="caption">
-                <h2>TABLETS &amp; PHONES <span>REPAIR SERVICE</span></h2>
-                <h3>anytime anywhere</h3>
-                <a class="button" href="#">read more</a>
-              </div>
+    <div id="metaslider" class="flexslider">
+      <ul class="slides">
+        <% Slider.all.each_with_index do |slide,index| %>
+        <%== if index==0 then '<li class="flex-active-slide">' else '<li class="">' end %>
+          <%= image_tag slide.image.url, alt: "slide1", class: "slider-38 slide-42", size: "1170x396", draggable: "true" %>
+          <div class="caption-wrap">
+            <div class="caption">
+              <%= slide.description.html_safe %>
             </div>
-          </li>
-          <li class="">
-            <img src="https://demo.gridgum.com/wordpress/computer-repair/wp-content/uploads/2014/04/slide2-941x318.png" alt="slide2" class="slider-38 slide-43" draggable="false" width="1170" height="396">
-            <div class="caption-wrap">
-              <div class="caption">
-                <h2>Office equipment <span>SERVICE &amp; SUPPORT</span></h2>
-                <h3>starting from $29.95/month</h3>
-                <a class="button" href="#">read more</a>
-              </div>
-            </div>
-          </li>
-          <li  class="">
-            <img src="https://demo.gridgum.com/wordpress/computer-repair/wp-content/uploads/2014/04/slide3-941x318.png" alt="slide3" class="slider-38 slide-44" draggable="false" width="1170" height="396">
-            <div class="caption-wrap">
-              <div class="caption">
-                <h2>computer <span>REPAIR &amp; SUPPORT</span></h2>
-                <h3>starting from $19.95/month</h3>
-                <a class="button" href="#">read more</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-
+          </div>
+        </li>
+        <%end%>
+      </ul>
+    </div>
   </div>
 </section>

@@ -1,3 +1,12 @@
+/* -- Layouts -- */
+#mainmenu * {
+  z-index: 9999;
+}
+#metaslider * {
+  z-index: 1;
+}
+/* //-- Layouts -- */
+
 header {
   .phone {
     border: 0px solid red;
@@ -50,6 +59,15 @@ header {
 .flex-control-nav {
   display: none;
 }
+#metaslider {
+  .caption .button {
+    color: #9c9c9c;
+  }
+  .caption .button:hover, .caption .button:before, {
+    color: black; 
+  }
+}
+
 /* // -- Slider -- */
 
 
