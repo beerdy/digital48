@@ -36,11 +36,19 @@ body, html { font-size: 100%; 	padding: 0; margin: 0;}
 
 body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
-    color: #47a3da;
+    color: #333333
 }
-
+h1 {
+	color: #2A6082;
+}
+h2, h3, h4 {
+	color: #3A82B0;
+}
+span {
+	color: #47A3DA;
+}
 a {
-	color: #f0f0f0;
+	color: #999999;
 	text-decoration: none;
 }
 

@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
       @mini_info = c if c.url == 'mini_info'
       @service_1 = c if c.url == 'service_1'
       @service_2 = c if c.url == 'service_2'
-      @super_info = c if c.url == 'super_info'
+      @utilize = c if c.url == 'utilize'
       @logo = c if c.url == 'logo'
     end
   end

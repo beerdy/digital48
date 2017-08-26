@@ -14,7 +14,7 @@
 /* first level ul style */
 .cbp-hrmenu > ul,
 .cbp-hrmenu .cbp-hrsub-inner {
-	width: 90%;
+	/*width: 90%; menu width*/
 	max-width: 70em;
 	margin: 0 auto;
 	padding: 0 1.875em;
@@ -26,7 +26,7 @@
 
 .cbp-hrmenu > ul > li > a {
 	font-weight: 700;
-	padding: 1em 2em;
+	/* padding: 1em 2em; --> moved to z-style */
 	color: #999;
 	display: inline-block;
 }

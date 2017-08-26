@@ -1,234 +1,3 @@
-<section id="menu">
-    <div class="container">
-      <header class="clearfix">
-        <style type="text/css">
-          .logo {
-            background-image: url(<%=@logo.image.url%>);
-          }
-        </style>
-          <div class="logo">
-            <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i> 7 <u>(</u>4742<u>)</u> 35 63 10</div>
-          </div>
-          <nav class="social">
-            <div><a href=""><i class="fa fa-vk" aria-hidden="true"></i></a></div>
-            <div><a href=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></div>
-            <div><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
-          </nav>
-      </header> 
-      <div class="main" id="mainmenu">
-        <nav id="cbp-hrmenu" class="cbp-hrmenu">
-          <ul>
-            <li>
-              <a href="#">Информация</a>
-              <div class="cbp-hrsub">
-                <div class="cbp-hrsub-inner"> 
-                  <div>
-                    <h4>Общая информация</h4>
-                    <ul>
-                      <li><a href="#">О компании</a></li>
-                      <li><a href="#">Реквезиты</a></li>
-                      <li><a href="#">Отзывы</a></li>
-                    </ul>
-                    <h4>Сотрудничество</h4>
-                    <ul>
-                      <li><a href="#">Партнеры</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4>Квалификация</h4>
-                    <ul>
-                      <li><a href="#">Сертификаты компании</a></li>
-                      <li><a href="#">Сертификаты инженеров</a></li>
-                      <li><a href="#">Прочие документы</a></li>
-                    </ul>
-                    <h4>Обратная связь</h4>
-                      <ul>
-                        <li><a href="#">Контакты & Местоположение</a></li>
-                      </ul>
-                  </div>
-                  <div>
-                    <h4>Портфолио</h4>
-                    <ul>
-                      <li><a href="#">Реализованные проекты</a></li>
-                      <li><a href="#">Наши клиенты</a></li>
-                    </ul>
-                  </div>
-                </div><!-- /cbp-hrsub-inner -->
-              </div><!-- /cbp-hrsub -->
-            </li>
-            <li>
-              <a href="#">ИТ Аутсорсинг</a>
-              <div class="cbp-hrsub">
-                <div class="cbp-hrsub-inner">
-                  <div>
-                    <h4>Офисная оргтехника</h4>
-                    <ul>
-                      <li><a href="#">Обслуживание офисной оргтехники</a></li>
-                      <li><a href="#">Ремонт офисной оргтехники</a></li>
-                      <li><a href="#">Консалтинг по офисной оргтехники</a></li>
-                    </ul>
-                    <h4>Персональный Компьютер</h4>
-                    <ul>
-                      <li><a href="#">Апгрейд парка ПК</a></li>
-                      <li><a href="#">Обслуживание парка ПК</a></li>
-                      <li><a href="#">Консалтинг</a></li>
-                      <li><a href="#">Бесплатная оценка</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4>Серверное оборудование</h4>
-                    <ul>
-                      <li><a href="#">Консалтинг «Решение под ключ»</a></li>
-                      <li><a href="#">Обслуживание Windows - Систем</a></li>
-                      <li><a href="#">Обслуживание Linux - Систем</a></li>
-                      <li><a href="#">Обслуживание Unix - Систем</a></li>
-                      <li><a href="#">Обслуживание MacX - Систем</a></li>
-                      <li><a href="#">Востановление данных</a></li>
-                      <li><a href="#">Реализация систем архивации</a></li>
-                      <li><a href="#">Защита информации & Безопатность</a></li>
-                      <li><a href="#">Кластеризация</a></li>
-                    </ul>
-                  </div>
-                  <!--
-                  <div>
-                    <h4>Games</h4>
-                    <ul>
-                      <li><a href="#">Catch the Bullet</a></li>
-                      <li><a href="#">Snoopydoo</a></li>
-                      <li><a href="#">Fallen Angel</a></li>
-                      <li><a href="#">Sui Maker</a></li>
-                      <li><a href="#">Wave Master</a></li>
-                      <li><a href="#">Golf Pro</a></li>
-                    </ul>
-                  </div>
-                  -->
-                </div><!-- /cbp-hrsub-inner -->
-              </div><!-- /cbp-hrsub -->
-            </li>
-            <li>
-              <a href="#">Частному Лицу</a>
-              <div class="cbp-hrsub">
-                <div class="cbp-hrsub-inner"> 
-                  <div>
-                    <h4>Компьютерная техника</h4>
-                    <ul>
-                      <li><a href="#">Обслуживание</a></li>
-                      <li><a href="#">Ремонт</a></li>
-                    </ul>
-                    <h4>Смартфоны и планшеты</h4>
-                    <ul>
-                      <li><a href="#">Замена АКБ</a></li>
-                      <li><a href="#">Ремонт Дисплея</a></li>
-                      <li><a href="#">Разблокировка</a></li>
-                      <li><a href="#">Обновление ПО</a></li>
-                      <li><a href="#">Профилактика</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4>Оргтехника</h4>
-                    <ul>
-                      <li><a href="#">Ремонт</a></li>
-                      <li><a href="#">Обслуживание</a></li>
-                      <li><a href="#">Диагностика</a></li>
-                    </ul>
-                    <h4>Расходные материалы</h4>
-                    <ul>
-                      <li><a href="#">Продажа картриджей</a></li>
-                      <li><a href="#">Заправка картриджей</a></li>
-                      <li><a href="#">Ремонт картриджей</a></li>
-                    </ul>
-                  </div>
-                </div><!-- /cbp-hrsub-inner -->
-              </div><!-- /cbp-hrsub -->
-            </li>
-            <li>
-              <a href="#">Утилизация</a>
-              <div class="cbp-hrsub">
-                <div class="cbp-hrsub-inner"> 
-                  <div>
-                    <h4>Learning &amp; Games</h4>
-                    <ul>
-                      <li><a href="#">Catch the Bullet</a></li>
-                      <li><a href="#">Snoopydoo</a></li>
-                      <li><a href="#">Fallen Angel</a></li>
-                      <li><a href="#">Sui Maker</a></li>
-                      <li><a href="#">Wave Master</a></li>
-                      <li><a href="#">Golf Pro</a></li>
-                    </ul>
-                    <h4>Utilities</h4>
-                    <ul>
-                      <li><a href="#">Gadget Finder</a></li>
-                      <li><a href="#">Green Tree Express</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4>Entertainment</h4>
-                    <ul>
-                      <li><a href="#">Gadget Finder</a></li>
-                      <li><a href="#">Green Tree Express</a></li>
-                      <li><a href="#">Green Tree Pro</a></li>
-                      <li><a href="#">Holy Cannoli</a></li>
-                      <li><a href="#">Wobbler 3.0</a></li>
-                      <li><a href="#">Coolkid</a></li>
-                    </ul>
-                  </div>
-                </div><!-- /cbp-hrsub-inner -->
-              </div><!-- /cbp-hrsub -->
-            </li>
-            <li>
-              <a href="#">Аренда техники</a>
-              <div class="cbp-hrsub">
-                <div class="cbp-hrsub-inner"> 
-                  <div>
-                    <h4>Utilities</h4>
-                    <ul>
-                      <li><a href="#">Green Tree Pro</a></li>
-                      <li><a href="#">Wobbler 3.0</a></li>
-                      <li><a href="#">Coolkid</a></li>
-                    </ul>
-                    <h4>Education</h4>
-                    <ul>
-                      <li><a href="#">Learn Thai</a></li>
-                      <li><a href="#">Math Genius</a></li>
-                      <li><a href="#">Chemokid</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4>Professionals</h4>
-                    <ul>
-                      <li><a href="#">Success 1.0</a></li>
-                      <li><a href="#">Moneymaker</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4>Learning &amp; Games</h4>
-                    <ul>
-                      <li><a href="#">Catch the Bullet</a></li>
-                      <li><a href="#">Snoopydoo</a></li>
-                      <li><a href="#">Fallen Angel</a></li>
-                      <li><a href="#">Sui Maker</a></li>
-                      <li><a href="#">Wave Master</a></li>
-                      <li><a href="#">Golf Pro</a></li>
-                    </ul>
-                  </div>
-                </div><!-- /cbp-hrsub-inner -->
-              </div><!-- /cbp-hrsub -->
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-
-    <%= javascript_include_tag 'cbpHorizontalMenu.min' %>
-
-    <script>
-      $(function() {
-        cbpHorizontalMenu.init();
-      });
-    </script>
-</section>
-    
-
 <section id="sliderWrap">
   <div class="container">
     <div id="metaslider" class="flexslider">
@@ -246,4 +15,107 @@
       </ul>
     </div>
   </div>
+</section>
+
+<section id="service">
+  <div class="container">
+      <!-- Mission statement -->
+      <div class="mission">
+        <div class="inner text-center">
+          <h1>
+            Сделайте свой бизнес проще с <span>«ДИДЖИТАЛ-Сервис»</span>
+          </h1>
+        </div>
+      </div>
+      <!-- Services -->
+      <div class="block services margin-top-large">
+        <legend align="center"><h2 class="block-title">
+          <span><b>Сервис</b> Компании</span> <small><a href="services.htm">перейти в услуги</a></small>
+        </h2></legend>
+        <ul class="thumbnails row">
+          <li class="col-sm-3">
+            <h3 class="title">
+              <a href="services.htm"><span><i class="glyphicon glyphicon-wrench icon-small icon-inverse-80 _icon-circle"></i></span> Ремонт оборудования</a>
+            </h3>
+            <p>Текст описание некой деятельности в сфере ИТ, нас ценят. Текст описание некой деятельности в сфере ИТ, нас ценят. Текст описание некой деятельности в сфере ИТ, нас ценят. </p>
+          </li>
+          <li class="col-sm-3">
+            <h3 class="title">
+              <a href="services.htm"><span><i class="glyphicon glyphicon-search icon-small icon-inverse-80 _icon-circle"></i></span> Оперативное обслуживание</a>
+            </h3>
+            <p>Текст описание некой деятельности в сфере ИТ, нас ценят. Текст описание некой деятельности в сфере ИТ, нас ценят. Текст описание некой деятельности в сфере ИТ, нас ценят. </p>
+          </li>
+          <li class="col-sm-3">
+            <h3 class="title">
+              <a href="services.htm"><span><i class="glyphicon glyphicon-pencil icon-small icon-inverse-80 _icon-circle"></i></span> Бесплатная консультация</a>
+            </h3>
+            <p>Текст описание некой деятельности в сфере ИТ, нас ценят. Текст описание некой деятельности в сфере ИТ, нас ценят. Текст описание некой деятельности в сфере ИТ, нас ценят. </p>
+          </li>
+          <li class="col-sm-3">
+            <h3 class="title">
+              <a href="services.htm"><span><i class="glyphicon glyphicon-shopping-cart icon-small icon-inverse-80 _icon-circle"></i></span> Магазин & Аренда оборудования</a>
+            </h3>
+            <p>Текст описание некой деятельности в сфере ИТ, нас ценят. Текст описание некой деятельности в сфере ИТ, нас ценят. Текст описание некой деятельности в сфере ИТ, нас ценят. </p>
+          </li>
+        </ul>
+      </div>
+      <!-- portfolio -->
+    </div>
+</section>
+
+
+
+<section id='utilize'>
+  <div class="container margtop30">
+    <legend align="center"><h2 class="block-title">
+      <span><b>Программа</b> Утилизации</span> <small><a href="javascript:void(0);">утилизируем технику</a></small>
+    </h2></legend>
+    <%=@utilize.slave.html_safe%>
+    <div class="row margtop30">
+      <div class="col-sm-6 utilize"><%=image_tag @utilize.image.url, class: 'img-responsive', alt: @utilize.title %></div>
+      <div class="col-sm-6 nice-buttons">
+        <div class="margtop70"><%=@utilize.description.html_safe%></div>
+        <div class="buttons">
+          <a class="btnn blue">Подробнее</a>
+          <a class="btnn purple">Прайс-лист</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id='clients'>
+  <div class="container margbottom30 margtop30">
+    <legend><h2 class="block-title">
+      <span><b>Мы</b> Работаем</span> <small><a href="#">наши клиенты</a></small>
+    </h2></legend>
+
+    <!-- CARUSEL - Our Clients-->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="row item active container text-center">
+        <% count = 0; Client.all.each do |client| %>
+        <%= count>=4? (count=1;'</div><div class="row item container text-center">'.html_safe) : (count+=1;'') %>
+          <%= image_tag client.image.url, alt: client.title, class: 'col-md-3 col-sm-3 img-responsive' %>
+        <%end%>
+        </div>
+      </div>
+
+      <div align="center" style="margin-top:20px;">
+      <!-- Controls -->
+        <a class="left" href="#carousel-example-generic" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right" href="#carousel-example-generic" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div><!-- // CARUSEL - Our Clients-->
+  </div>
+  <script type="text/javascript">
+    $('.carousel').carousel()
+  </script>
 </section>

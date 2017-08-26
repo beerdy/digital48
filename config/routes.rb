@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  resources :sliders
   mount Rich::Engine => '/rich', :as => 'rich'
+  
+  get '/projects/:id', to: 'clients#show'
+  get '/pages/portfolios', to: 'clients#index'
+
+  resources :reviews
+  resources :clients
+  resources :sliders
   resources :pages
   resources :contents
   resources :messages

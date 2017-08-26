@@ -1,0 +1,18 @@
+<%= render 'shared/page' %>
+<section id="pageWrap">
+  <div class="container">
+
+    <div class="page-text">
+        <legend align="center"><h2 class="block-title">
+          <span><b>Реализованные </b> Проекты</span> <small><a href="javascript:void(0);">Список Проектов</a></small>
+        </h2></legend>
+        <% @clients.each do |client| %>
+          <div class="row client_url">
+            <div class="col-md-3"><%= image_tag client.image.url, alt: client.title, class: 'image-responsive' if client.image_stored? %></div>
+            <div class="col-md-9"><%= link_to client.slave, "/projects/#{client.id}" %></div>
+          </div>
+        <%end%>
+    </div>
+  
+  </div>
+</section> 
