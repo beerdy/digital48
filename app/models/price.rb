@@ -1,5 +1,6 @@
-class Content < ActiveRecord::Base
+class Price < ActiveRecord::Base
   dragonfly_accessor :image
+  
   rails_admin do
     include_all_fields
     
@@ -7,11 +8,6 @@ class Content < ActiveRecord::Base
     
     edit do
       field :description, :rich_editor do
-        config({
-          :insert_many => true
-        })
-      end
-      field :slave, :rich_editor do
         config({
           :insert_many => true
         })

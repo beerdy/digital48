@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
       @service_2 = c if c.url == 'service_2'
       @utilize = c if c.url == 'utilize'
       @logo = c if c.url == 'logo'
+      @footerprice = c if c.url == 'footerprice'
     end
   end
 end

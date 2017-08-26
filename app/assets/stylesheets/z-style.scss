@@ -235,6 +235,30 @@ header {
 
 
 
+
+/* -- Tables -- */
+.thead1 {
+  background-color: #47A3DA;
+  th {
+    vertical-align: middle !important;
+    text-align: center;
+    color: white;
+  }
+}
+.thead2 {
+  background-color: #F1F3EE;
+  th {
+    font-style: italic;
+    font-weight: normal;
+  }
+}
+td[colspan] {
+  text-align: center;
+}
+
+
+
+
 /*-- Clients --*/
 .client_url {
   .col-md-9 {
