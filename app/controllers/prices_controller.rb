@@ -11,6 +11,15 @@ class PricesController < ApplicationController
   # GET /prices/1.json
   def show
     @page=@price
+
+    @html = case true
+    when @page.cartridge
+      @footerprice.description
+    when @page.utilize
+      @utilize.slave
+    else
+      @footerprice.description.html_safe
+    end
   end
 
   # GET /prices/new

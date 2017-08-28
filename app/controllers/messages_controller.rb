@@ -14,7 +14,6 @@ class MessagesController < ApplicationController
 
   # GET /messages/new
   def new
-    @message = Message.new
   end
 
   # GET /messages/1/edit
@@ -28,7 +27,8 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
+        MessageMailer.welcome_email(@message).deliver_later
+        format.html { redirect_to @message, notice: 'Сообщение успешно доставленно!' }
         format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new }

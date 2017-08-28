@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   def initialize
     super
     content
+
+    @message = Message.new
   end
 
   def content
@@ -15,6 +17,10 @@ class ApplicationController < ActionController::Base
       @utilize = c if c.url == 'utilize'
       @logo = c if c.url == 'logo'
       @footerprice = c if c.url == 'footerprice'
+      @infoblock = c if c.url == 'infoblock'
+      @rekviziti = c if c.url == 'rekviziti'
+      @slogan = c if c.url == 'slogan'
+      @footer = c if c.url == 'footer'
     end
   end
 end

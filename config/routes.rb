@@ -1,24 +1,29 @@
 Rails.application.routes.draw do
-  resources :prices
-  mount Rich::Engine => '/rich', :as => 'rich'
+  
+  get 'company/index'
+
+  # You can have the root of your site routed with "root"
+  root 'welcome#index'
   
   get '/projects/:id', to: 'clients#show'
   get '/pages/portfolios', to: 'clients#index'
+  
+  get 'welcome/index'
 
+  resources :prices
   resources :reviews
   resources :clients
   resources :sliders
   resources :pages
   resources :contents
   resources :messages
+
+  mount Rich::Engine => '/rich', :as => 'rich'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get 'welcome/index'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

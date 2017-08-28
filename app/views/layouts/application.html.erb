@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Диджитал Сервис - Крупнейший в Липецке Авторизованный сервисный центр</title>
+  <title>Диджитал Сервис <%= yield :title %> - Крупнейший в Липецке Авторизованный сервисный центр</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/ico/favicon-16x16.png">
+  <link rel="manifest" href="/assets/ico/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/ico/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <meta name="description" content="Ремонт компьютеров и ноутбуков, смартфонов и планшетов, принтеров, МФУ и сканеров в Липецке. Утилизация электронного оборудования. Заправка картриджей">
@@ -12,9 +31,7 @@
   <meta property="og:locale" content="ru_RU">
   <meta property="og:description" content="Ремонт и обслуживание компьютерной, мобильной и офисной техники. Утилизация электронного оборудования. Заправка и восстановление картиджей, профессиональной ремонт офисной техники, гарантийное обслуживание компьютеров">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+
 </head>
 <body>
 
@@ -29,6 +46,7 @@
             }
           </style>
             <div class="logo">
+              <a id='indexpage'></a>
               <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i> 7 <u>(</u>4742<u>)</u> 35 63 10</div>
             </div>
             <nav class="social">
@@ -63,8 +81,7 @@
                     <div>
                       <h4>Контактная информация</h4>
                       <ul>
-                        <li><a href="#">Обратная связь</a></li>
-                        <li><a href="#">Реквезиты</a></li>
+                        <li><a href="/messages">Обратная связь && Реквезиты</a></li>
                       </ul>
                     </div>
                   <div>
@@ -85,9 +102,9 @@
                       <h4>Персональный Компьютер</h4>
                       <ul>
                         <li><a href="#">Апгрейд парка ПК</a></li>
-                        <li><a href="#">Обслуживание парка ПК</a></li>
+                        <li><a href="/pages/servicepark">Обслуживание парка ПК</a></li>
                         <li><a href="#">Консалтинг «Рабочее место сотрудника»</a></li>
-                        <li><a href="#">Бесплатная оценка</a></li>
+                        <li><a href="/pages/freeval">Бесплатная оценка</a></li>
                       </ul>
                     </div>
                     <div>
@@ -107,7 +124,7 @@
                     <div>
                       <h4>«Удаленка»</h4>
                       <ul>
-                        <li><a href="#">Удаленное обслуживание ПК</a></li>
+                        <li><a href="/pages/remoteservicepc">Удаленное обслуживание ПК</a></li>
                         <li><a href="#">Удаленное обслуживание Серверов</a></li>
                         <li><a href="#">*Удаленная устанка Сервер-Платформ</a></li>
                       </ul>
@@ -203,7 +220,7 @@
                 </div><!-- /cbp-hrsub -->
               </li>
               <li>
-                <a href="#">Аренда техники</a>
+                <a href="#">Аренда Техники</a>
                 <div class="cbp-hrsub">
                   <div class="cbp-hrsub-inner"> 
                     <div>
@@ -232,7 +249,7 @@
                 </div><!-- /cbp-hrsub -->
               </li>
               <li>
-                <a href="#">Наши цены</a>
+                <a href="#">Наши Цены</a>
                 <div class="cbp-hrsub">
                   <div class="cbp-hrsub-inner"> 
                     <div>
@@ -313,18 +330,11 @@
         </div>
       </div>
 
-      <%= javascript_include_tag 'cbpHorizontalMenu.min' %>
-
-      <script>
-        $(function() {
-          cbpHorizontalMenu.init();
-        });
-      </script>
   </section>
   <!-- // MENU -->
-  
+  <hr style="border-bottom: 4px solid #47a3da;">
   <%= yield %>
-
+  <hr style="border-bottom: 4px solid #47a3da;">
   <section id="footer">
     <!-- CONTAINER -->
     <div class="container">
@@ -364,11 +374,11 @@
           <div class="span9 contact_form">
             <div id="note"></div>
             <div id="fields">
-              <form id="contact-form-face" class="clearfix" action="#">
-                <input class="form-control" name="name" value="Имя" onfocus="if (this.value == 'Имя') this.value = '';" onblur="if (this.value == '') this.value = 'Имя';" type="text">
-                <textarea class="form-control" name="message" onfocus="if (this.value == 'Сообщение') this.value = '';" onblur="if (this.value == '') this.value = 'Сообщение';">Сообщение</textarea>
+              <%= form_for @message, html: { id: "contact-form-face", class: "clearfix" } do |f| %>
+                <input class="form-control" name="message[name]" value="Имя" onfocus="if (this.value == 'Имя') this.value = '';" onblur="if (this.value == '') this.value = 'Имя';" type="text">
+                <textarea class="form-control" name="message[description]" onfocus="if (this.value == 'Сообщение') this.value = '';" onblur="if (this.value == '') this.value = 'Сообщение';">Сообщение</textarea>
                 <input class="form-control" value="Отправить сообщение" type="submit">
-              </form>
+              <%end%>
             </div>
           </div><!-- //CONTACT FORM -->
         </div>
@@ -380,6 +390,16 @@
       </div><!-- //ROW -->
     </div><!-- //CONTAINER -->
   </section>
+<%= javascript_include_tag 'cbpHorizontalMenu.min' %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+<%= @footer.description.html_safe %>
+<!-- HelloPreload http://hello-site.ru/preloader/ -->
+<style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #3498DB url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;background-size:41px;}</style>
+<div id="hellopreloader"><div id="hellopreloader_preload"></div><p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p></div>
+
+
 
 </body>
 </html>

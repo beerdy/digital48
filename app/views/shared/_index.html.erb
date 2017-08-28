@@ -1,0 +1,93 @@
+<section id="sliderWrap">
+  <div class="container">
+    <div id="metaslider" class="flexslider">
+      <ul class="slides">
+        <% Slider.all.each_with_index do |slide,index| %>
+        <%== if index==0 then '<li class="flex-active-slide">' else '<li class="">' end %>
+          <%= image_tag slide.image.url, alt: "slide1", class: "slider-38 slide-42", size: "1170x396", draggable: "true" %>
+          <div class="caption-wrap">
+            <div class="caption">
+              <%= slide.description.html_safe %>
+            </div>
+          </div>
+        </li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="service">
+  <div class="container">
+      <!-- Mission statement -->
+      <div class="mission">
+        <div class="inner text-center">
+          <h1>
+            <%= @slogan.description.html_safe %>
+          </h1>
+        </div>
+      </div>
+      <!-- Services -->
+      <div class="block services margin-top-large">
+        <legend><h2 class="block-title">
+          <span><b>Сервис</b> Компании</span> <small><a href="services.htm">перейти в услуги</a></small>
+        </h2></legend>
+        <%= @infoblock.description.html_safe %>
+      </div>
+      <!-- portfolio -->
+    </div>
+</section>
+
+
+
+<section id='utilize'>
+  <div class="container margtop30">
+    <legend><h2 class="block-title">
+      <span><b>Программа</b> Утилизации</span> <small><a href="javascript:void(0);">утилизируем технику</a></small>
+    </h2></legend>
+    <%=@utilize.title.html_safe%>
+    <div class="row margtop30">
+      <div class="col-sm-6 utilize"><%=image_tag @utilize.image.url, class: 'img-responsive', alt: @utilize.title %></div>
+      <div class="col-sm-6 nice-buttons">
+        <div class="margtop70"><%=@utilize.description.html_safe%></div>
+        <div class="buttons">
+          <a class="btnn blue" href="/pages/utilize">Подробнее</a>
+          <a class="btnn purple" href="/prices/19">Прайс-лист</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id='clients'>
+  <div class="container margbottom30 margtop30">
+    <legend><h2 class="block-title">
+      <span><b>Мы</b> Работаем</span> <small><a href="#">Наши лиенты</a></small>
+    </h2></legend>
+
+    <!-- CARUSEL - Our Clients-->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="row item active container text-center">
+        <% count = 0; Client.all.each do |client| %>
+        <%= count>=4? (count=1;'</div><div class="row item container text-center">'.html_safe) : (count+=1;'') %>
+          <%= image_tag client.image.url, alt: client.title, class: 'col-md-3 col-sm-3 img-responsive' %>
+        <%end%>
+        </div>
+      </div>
+
+      <div align="center" style="margin-top:20px;">
+      <!-- Controls -->
+        <a class="left" href="#carousel-example-generic" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right" href="#carousel-example-generic" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div><!-- // CARUSEL - Our Clients-->
+  </div>
+</section>

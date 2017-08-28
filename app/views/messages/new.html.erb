@@ -1,5 +1,34 @@
-<h1>New Message</h1>
+<section id="pageWrap">
+  <div class="container">
+    <div class="page-header">
+      <span>Обратная связь</span>
+    </div>
+    <div class="page-text">
+        
+        <legend align="center"><h2 class="block-title">
+          <span><b>Мы</b> На карте</span> <small><a href="javascript:void(0);">Диджитал Сервис</a></small>
+        </h2></legend>
+        <div id="map">
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa2bacba970bdfe988363016fe90ef7d254bf7daaeea511592cfc9bd4e9c2f929&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', messages_path %>
+        <legend align="center"><h2 class="block-title">
+          <span><b>Форма</b> Обратной связи</span> <small><a href="javascript:void(0);">Диджитал Сервис</a></small>
+        </h2></legend>
+        <div id="backcall" class="row">
+          <%= form_for(@message) do |f| %>
+          <div class="col-md-4">
+            <input class="form-control" name="message[name]" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Ваше Имя" type="text">
+            <input class="form-control" name="message[email]" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Ваш Контакт" type="text">
+            <input class="form-control" name="message[subject]" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Тема обращения" type="text">
+            <input name="commit" value="Отправить" type="submit" class="btn btn-info">
+          </div>
+          <div class="col-md-8">
+            <textarea name="message[description]" rows="7" class="form-control" aria-invalid="false" placeholder="Ваше обращение"></textarea>
+          </div>
+          <%end%>
+        </div>
+    
+    </div>
+  </div>
+</section>

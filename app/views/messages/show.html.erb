@@ -1,34 +1,8 @@
-<p id="notice"><%= notice %></p>
+<section id="pageWrap">
+  <div class="container">
+    <div class="page-text">
+      <p id="notice"><%= notice %></p>
+    </div>
+  </div>
+</section>
 
-<p>
-  <strong>Name:</strong>
-  <%= @message.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @message.email %>
-</p>
-
-<p>
-  <strong>Subject:</strong>
-  <%= @message.subject %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @message.description %>
-</p>
-
-<p>
-  <strong>Image uid:</strong>
-  <%= @message.image_uid %>
-</p>
-
-<p>
-  <strong>Image name:</strong>
-  <%= @message.image_name %>
-</p>
-
-<%= link_to 'Edit', edit_message_path(@message) %> |
-<%= link_to 'Back', messages_path %>
