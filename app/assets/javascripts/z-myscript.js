@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
     imported.src = 'https://web.redhelper.ru/service/main.js?c=digital48';
     imported.charset = "utf-8";
     imported.id="rhlpscrtg";
-    imported.async = false;
+    imported.async = "async";
     document.head.appendChild(imported);
     // END RedConnect
 
