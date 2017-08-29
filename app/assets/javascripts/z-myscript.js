@@ -50,14 +50,14 @@ jQuery(document).ready(function($) {
 
 
 
-    // RedConnect
+    /* RedConnect
     var imported = document.createElement('script');
     imported.src = 'https://web.redhelper.ru/service/main.js?c=digital48';
     imported.charset = "utf-8";
     imported.id="rhlpscrtg";
     imported.async = "async";
     document.head.appendChild(imported);
-    // END RedConnect
+    */// END RedConnect
 
     jQuery("#indexpage").on("click", function() {
       window.location = '/company/index'
