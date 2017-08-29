@@ -12,9 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+// require turbolinks
 //= require_tree .
 //= require rich
-
-// init carusel
-$('.carousel').carousel();
