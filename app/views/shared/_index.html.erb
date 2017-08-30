@@ -1,5 +1,5 @@
 <section id="sliderWrap">
-  <div class="container">
+  <div class="container ">
     <div id="metaslider" class="flexslider">
       <ul class="slides">
         <% Slider.all.each_with_index do |slide,index| %>
@@ -17,16 +17,16 @@
   </div>
 </section>
 
+<section id="slogan">
+    <div class="inner text-center">
+      <h1>
+        <%= @slogan.description.html_safe %>
+      </h1>
+    </div>
+</section>
+
 <section id="service">
   <div class="container">
-      <!-- Mission statement -->
-      <div class="mission">
-        <div class="inner text-center">
-          <h1>
-            <%= @slogan.description.html_safe %>
-          </h1>
-        </div>
-      </div>
       <!-- Services -->
       <div class="block services margin-top-large">
         <legend><h2 class="block-title">

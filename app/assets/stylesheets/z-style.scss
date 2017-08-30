@@ -1,3 +1,21 @@
+#utilize,#footer {
+  background-color: #F8F8F8;
+}
+#service {
+  background-image: url(background.jpg)
+}
+#menu {
+  background-color: #FFF; 
+}
+
+hr {
+  padding:0;
+  margin:0;
+}
+
+#sliderWrap {
+  background-image: url(backslide.gif);
+}
 #preloader { 
   position: fixed; 
   left: 0; 
@@ -140,16 +158,33 @@ header {
     color: black; 
   }
   li {
-    background-image: url('/assets/backslide.gif');
-    background-color: #F0F0F0;
+    borrder: 1px solid red;
+    //background-image: url('/assets/backslide.gif');
+    //background-color: #F0F0F0;
   }
 }/* // -- Slider -- */
 
-
+#slogan {
+  padding-top: 50px;
+}
 
 /*-- service --*/
 #service {
+  //background-color:#F0F0F0;
+  ul {
+    margin:0;
+    padding:0;
+  }
   li {
+    display: block;
+    div {
+      background-color: #fff;
+      float: left;
+      padding: 14px;
+      -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    }
     list-style: none;
     text-align: justify;
     h3 {
