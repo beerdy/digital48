@@ -31,6 +31,8 @@
   <meta property="og:locale" content="ru_RU">
   <meta property="og:description" content="Ремонт и обслуживание компьютерной, мобильной и офисной техники. Утилизация электронного оборудования. Заправка и восстановление картиджей, профессиональной ремонт офисной техники, гарантийное обслуживание компьютеров">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
 
 </head>
 <body>
@@ -392,7 +394,6 @@
     </div><!-- //CONTAINER -->
   </section>
 
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
 <%= csrf_meta_tags %>
 <%= @footer.description.html_safe %>
