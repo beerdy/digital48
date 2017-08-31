@@ -38,7 +38,7 @@
 <body>
   <!-- /.preloader -->
   <div id="preloader"></div>
-
+  <%=@cert.description.html_safe%> 
   <!-- MENU -->
   <section id="menu">
       <div class="container">
@@ -50,7 +50,7 @@
           </style>
             <div class="logo">
               <a id='indexpage' onclick="return goTo('/company/index');"></a>
-              <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i> 7 <u>(</u>4742<u>)</u> 35 63 10</div>
+              <%=@phoneheader.description.html_safe%>
             </div>
             <nav class="social">
               <div><a href=""><i class="fa fa-vk" aria-hidden="true"></i></a></div>
@@ -95,47 +95,32 @@
                 <a href="#">ИТ Аутсорсинг</a>
                 <div class="cbp-hrsub">
                   <div class="cbp-hrsub-inner">
+
                     <div>
-                      <h4>Офисная оргтехника</h4>
+                      <h4>Обслуживание & Ремонт</h4>
                       <ul>
-                        <li><a href="#">Обслуживание офисной оргтехники</a></li>
-                        <li><a href="#">Ремонт офисной оргтехники</a></li>
-                        <li><a href="#">Консалтинг по офисной оргтехники</a></li>
-                      </ul>
-                      <h4>Персональный Компьютер</h4>
-                      <ul>
-                        <li><a href="#">Апгрейд парка ПК</a></li>
-                        <li><a href="/pages/servicepark">Обслуживание парка ПК</a></li>
-                        <li><a href="#">Консалтинг «Рабочее место сотрудника»</a></li>
-                        <li><a href="/pages/freeval">Бесплатная оценка</a></li>
+                        <li><a href="/pages/orgtechnic">Офисная оргтехника</a>
+                        <li><a href="/pages/servicepark">Персональный Компьютер</a>
+                        <li><a href="/pages/osservise">ОС Windows, Linux, Unix, Mac OSx</a>
                       </ul>
                     </div>
                     <div>
-                      <h4>Серверное оборудование</h4>
+                      <h4>ИТ Решения</h4>
                       <ul>
-                        <li><a href="#">Консалтинг «Решение под ключ»</a></li>
-                        <li><a href="#">Обслуживание Windows - Систем</a></li>
-                        <li><a href="#">Обслуживание Linux - Систем</a></li>
-                        <li><a href="#">Обслуживание Unix - Систем</a></li>
-                        <li><a href="#">Обслуживание MacX - Систем</a></li>
-                        <li><a href="#">Востановление данных</a></li>
-                        <li><a href="#">Реализация систем архивации</a></li>
-                        <li><a href="#">Защита информации & Безопатность</a></li>
-                        <li><a href="#">Кластеризация</a></li>
+                        <li><a href="/pages/clusterandserver">Сервера & Кластеризация</a></li>
+                        <li><a href="/pages/data">Восстановление, Архивация, Защита данных</a></li>
+                        <li><a href="/pages/remoteservicepc">«Удаленка»</a></li>
+                        <li><a href="/pages/atc">Телефония</a></li>
                       </ul>
                     </div>
                     <div>
-                      <h4>«Удаленка»</h4>
+                      <h4>Консалтинг & Оценка</h4>
                       <ul>
-                        <li><a href="/pages/remoteservicepc">Удаленное обслуживание ПК</a></li>
-                        <li><a href="#">Удаленное обслуживание Серверов</a></li>
-                        <li><a href="#">*Удаленная устанка Сервер-Платформ</a></li>
+                        <li><a href="/pages/consaltkey">Консалтинг «Решение под ключ»</a></li>
+                        <li><a href="/pages/consaltpc">Рабочее место сотрудника</a></li>
+                        <li><a href="/pages/consaltorg">Офисная оргтехника</a></li>
                       </ul>
-                      <h4>Телефония</h4>
-                      <ul>
-                        <li><a href="#">Решения на базе Asterisk</a></li>
-                        <li><a href="#">Решения на базе миниАТС</a></li>
-                      </ul>>
+                    </div>
 
                     <!--
                     <div>
@@ -160,95 +145,76 @@
                     <div>
                       <h4>Компьютерная техника</h4>
                       <ul>
-                        <li><a href="#">Консультация при покупке</a></li>
-                        <li><a href="#">Ремонт видеокарты</a></li>
-                        <li><a href="#">Сборка ПК</a></li>
-                        <li><a href="#">Установка ПО</a></li>
-                        <li><a href="#">Ремонт ПК</a></li>
-                        <li><a href="#">Апгрейд ПК</a></li>
+                        <li><a href="/pages/chastpc#buy">Консультация при покупке</a></li>
+                        <li><a href="/pages/chastpc#card">Ремонт видеокарты</a></li>
+                        <li><a href="/pages/chastpc#complect">Сборка ПК</a></li>
+                        <li><a href="/pages/chastpc#po">Установка ПО</a></li>
+                        <li><a href="/pages/chastpc#repair">Ремонт ПК</a></li>
+                        <li><a href="/pages/chastpc#update">Апгрейд ПК</a></li>
                       </ul>
                     </div>
                     <div>
                       <h4>Оргтехника</h4>
                       <ul>
-                        <li><a href="#">Ремонт</a></li>
-                        <li><a href="#">Диагностика</a></li>
-                        <li><a href="#">Чмстка</a></li>
-                      </ul>
-                      <h4>Расходные материалы</h4>
-                      <ul>
-                        <li><a href="#">Заправка картриджей</a></li>
-                        <li><a href="#">Ремонт картриджей</a></li>
+                        <li><a href="/pages/chastorg#repair">Ремонт</a></li>
+                        <li><a href="/pages/chastorg#diag">Диагностика</a></li>
+                        <li><a href="/pages/chastorg#clean">Чистка</a></li>
+                        <li><a href="/pages/chastorg#charge">Заправка картриджей</a></li>
                       </ul>
                     </div>
                     <div>
                       <h4>Смартфоны и планшеты</h4>
                       <ul>
-                        <li><a href="#">Замена АКБ</a></li>
-                        <li><a href="#">Замена Дисплея</a></li>
-                        <li><a href="#">Ремонт (перепайка) разъемов</a></li>
-                        <li><a href="#">Ремонт материнской платы</a></li>
-                        <li><a href="#">Разблокировка</a></li>
-                        <li><a href="#">Обновление ПО</a></li>
-                        <li><a href="#">Прошивка - все платформы</a></li>
+                        <li><a href="/pages/smart#akb">Замена АКБ</a></li>
+                        <li><a href="/pages/smart#lcd">Замена Дисплея</a></li>
+                        <li><a href="/pages/smart#connector">Ремонт (перепайка) разъемов</a></li>
+                        <li><a href="/pages/smart#motherboard">Ремонт материнской платы</a></li>
+                        <li><a href="/pages/smart#power">Ремонт блока питания</a></li>
+                        <li><a href="/pages/smart#unlock">Разблокировка</a></li>
+                        <li><a href="/pages/smart#update">Обновление ПО</a></li>
+                        <li><a href="/pages/smart#firmware">Прошивка - все платформы</a></li>
                       </ul>
                     </div>
                   </div><!-- /cbp-hrsub-inner -->
                 </div><!-- /cbp-hrsub -->
               </li>
               <li>
-                <a href="#">Утилизация & Магазин</a>
+                <a href="#">Аренда & Магазин</a>
                 <div class="cbp-hrsub">
                   <div class="cbp-hrsub-inner"> 
                     <div>
                       <h4>Магазин</h4>
                       <ul>
-                        <li><a href="#">Расходные материалы</a></li>
-                        <li><a href="#">Профессиональная и офисная техника</a></li>
-                        <li><a href="#">Сетевое оборудование</a></li>
-                        <li><a href="#">ПК и комплектующие</a></li>
-                        <li><a href="#">Серверное оборудование</a></li>
+                        <li><a href="/pages/store#material">Расходные материалы</a></li>
+                        <li><a href="/pages/store#proftech">Профессиональная и офисная техника</a></li>
+                        <li><a href="/pages/store#network">Сетевое оборудование</a></li>
+                        <li><a href="/pages/store#pc">ПК и комплектующие</a></li>
+                        <li><a href="/pages/store#server">Серверное оборудование</a></li>
                       </ul>
                     </div>
                     <div>
-                      <h4>Утилизируем</h4>
+                      <h4>Аренда Техники</h4>
                       <ul>
-                        <li><a href="#">Оргтехнику</a></li>
-                        <li><a href="#">Персональные Компьютеры</a></li>
-                        <li><a href="#">Гаджеты</a></li>
-                        <li><a href="#">Бытовая техника</a></li>
+                        <li><a href="/pages/rent#office">Офисная техника</a></li>
+                        <li><a href="/pages/rent#production">Промышленное оборудование</a></li>
+                        <li><a href="/pages/rent#server">Серверное оборудование</a></li>
+                        <li><a href="/pages/rent#network">Сетевое оборудование</a></li>
                       </ul>
                     </div>
                   </div><!-- /cbp-hrsub-inner -->
                 </div><!-- /cbp-hrsub -->
               </li>
               <li>
-                <a href="#">Аренда Техники</a>
+                <a href="#">Утилизация</a>
                 <div class="cbp-hrsub">
                   <div class="cbp-hrsub-inner"> 
                     <div>
-                      <h4>Офисная техника</h4>
+                      <h4>Утилизация</h4>
                       <ul>
-                        <li><a href="#">Принтеры, МФУ, Копиры</a></li>
-                        <li><a href="#">Персональные Компьютеры</a></li>
-                        <li><a href="#">Коммутационное оборудование</a></li>
-                      </ul>
-                      <h4>Промышленное оборудование</h4>
-                      <ul>
-                        <li><a href="#">Принтеры, МФУ, Копиры</a></li>
-                        <li><a href="#">Серверное оборудование</a></li>
-                        <li><a href="#">Спецтехника</a></li>
+                        <li><a href="/pages/utilize">Утилизируем технику & Мебель</a></li>
                       </ul>
                     </div>
-                    <div>
-                      <h4>Сетевое оборудование</h4>
-                      <ul>
-                        <li><a href="#">Коммутаторы, роутеры</a></li>
-                        <li><a href="#">WI-FI роуминг станции</a></li>
-                        <li><a href="#">Коммутационные шкафы</a></li>
-                      </ul>
-                    </div>
-                  </div><!-- /cbp-hrsub-inner -->
+                  </div>
                 </div><!-- /cbp-hrsub -->
               </li>
               <li>
@@ -345,27 +311,14 @@
       <div class="row animated fadeInUp" data-appear-top-offset="-200" data-animated="fadeInUp">
         <div class="col-lg-4 col-md-4 col-sm-6 padbot30 adress">
           <h4><b>Контакты</b> Местоположение</h4>
-          <table><tbody><tr>
-            <td style="text-align: left;"><i class="fa fa-home" aria-hidden="true"></i></td>
-            <td>&nbsp;&nbsp;&nbsp; 398002, г. Липецк, ул. Терешковой д. 13Б</td></tr><tr>
-            <td><i class="fa fa-phone" aria-hidden="true"></i></td>
-            <td>&nbsp;&nbsp;&nbsp;  +7 (4742) 35-63-10, 36-19-28</td></tr><tr>
-            <td style="text-align: left;"><i class="fa fa-envelope" aria-hidden="true"></i></td>
-            <td>&nbsp;&nbsp;&nbsp; digital@komp48.ru</td></tr>
-          </tbody></table>
+          <%=@worktime.slave.html_safe%>
           <div class="padbot30"></div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 padbot30">
           <h4><b>Часы</b> работы</h4>
           <div class="recent_posts_small clearfix">
             <div class="time">
-              <table>
-              <tbody><tr>
-                <td style="text-align: left;">понедельник-пятница</td>
-                <td>&nbsp;&nbsp;&nbsp; с 10:00 до 18:00</td></tr><tr>
-                <td>суббота-воскресенье</td>
-                <td>&nbsp;&nbsp;&nbsp; с 10:00 до 20:00</td></tr><tr>
-              </tr></tbody></table>
+              <%=@worktime.description.html_safe%>
               <br><i style="font-size: 7pt">* праздничные дни являются сокращенными - часы работы уточняйте по телефону</i>
             </div>
           </div>

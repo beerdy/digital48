@@ -21,6 +21,9 @@ class ApplicationController < ActionController::Base
       @rekviziti = c if c.url == 'rekviziti'
       @slogan = c if c.url == 'slogan'
       @footer = c if c.url == 'footer'
+      @worktime = c if c.url == 'worktime'
+      @cert = c if c.url == 'cert'
+      @phoneheader = c if c.url == 'phoneheader'
     end
   end
 end

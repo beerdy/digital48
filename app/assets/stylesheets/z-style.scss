@@ -58,7 +58,7 @@ h2 small {
 
 legend {
   h2 span {
-    border-bottom: 2px solid #3A82B0;
+    border-bottom: 2px solid #ABD769;
     padding-bottom: 10px;
   }
 }
@@ -102,6 +102,14 @@ header {
     cursor: pointer;
   }
 }
+.form-control[type=submit] {
+  background-color: #ABD769 !important;
+}
+.form-control[type=submit]:hover {
+  background-color: #9fc960 !important;
+  color: #fff;
+}
+
 
 .social {
   //border: 1px solid red;
@@ -129,6 +137,15 @@ header {
   }
 }
 
+#authoritative {
+  span {
+    color: #FF1E12;
+    font-weight: bold;
+  }
+  background-color: #ABD769;
+  color: #fff;
+  text-transform: uppercase;
+}
 
 
 /* -- Slider -- */
@@ -149,7 +166,7 @@ header {
     background-color: #9c9c9c;
   }
   h2 span, h3 span {
-    background-color: #47A3DA;
+    background-color: #ABD769;
   }
   .caption .button {
     color: #9c9c9c;
