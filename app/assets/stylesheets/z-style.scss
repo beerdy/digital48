@@ -58,7 +58,7 @@ h2 small {
 
 legend {
   h2 span {
-    border-bottom: 2px solid #ABD769;
+    border-bottom: 2px solid #2C6EBD;
     padding-bottom: 10px;
   }
 }
@@ -103,13 +103,15 @@ header {
   }
 }
 .form-control[type=submit] {
-  background-color: #ABD769 !important;
+  background-color: #2C6EBD !important;
 }
 .form-control[type=submit]:hover {
   background-color: #9fc960 !important;
   color: #fff;
 }
-
+.fa {
+  color: #2C6EBD !important;
+}
 
 .social {
   //border: 1px solid red;
@@ -142,7 +144,8 @@ header {
     color: #FF1E12;
     font-weight: bold;
   }
-  background-color: #ABD769;
+  text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+  background-color: #2C6EBD;
   color: #fff;
   text-transform: uppercase;
 }
@@ -166,7 +169,7 @@ header {
     background-color: #9c9c9c;
   }
   h2 span, h3 span {
-    background-color: #ABD769;
+    background-color: #2C6EBD;
   }
   .caption .button {
     color: #9c9c9c;
@@ -182,12 +185,48 @@ header {
 }/* // -- Slider -- */
 
 #slogan {
+  font-weight: bold;
   padding-top: 50px;
+  text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
 }
 
 /*-- service --*/
 #service {
-  //background-color:#F0F0F0;
+  .swrapper {
+    text-align: center;
+  }
+  .shead {
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    color: white;
+    background-color: #2C6EBD;
+    display: inline-block;
+  }
+  .sblocks {
+    p {
+      color: #2A6082;
+    }
+    ul {
+      padding: 14px 28px 14px 28px;
+      background-color: rgba(71, 163, 218, 1);
+      color: #fff;
+    }
+  }
+  p {
+    font-size: 45px;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none;
+    text-align: center;
+    text-indent: 0px;
+  }
+  text-transform: uppercase;
+  background-color:#F0F0F0;
+
+  /*background-color:#F0F0F0;
   ul {
     margin:0;
     padding:0;
@@ -207,7 +246,8 @@ header {
     h3 {
       text-align: left;
     }
-  }
+  }*/
+
 
 }/* // -- service --*/
 
