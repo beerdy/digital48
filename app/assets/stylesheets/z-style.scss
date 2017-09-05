@@ -109,9 +109,7 @@ header {
   background-color: #9fc960 !important;
   color: #fff;
 }
-.fa {
-  color: #2C6EBD !important;
-}
+
 
 .social {
   //border: 1px solid red;
@@ -128,7 +126,7 @@ header {
     text-align: center;
     margin-top: 1px;
     display: block;
-    color: #47A3DA;
+    color: #2C6EBD;
   }
   i:hover, i:after {
     color: white;
@@ -212,6 +210,12 @@ header {
       background-color: rgba(71, 163, 218, 1);
       color: #fff;
     }
+    li {
+      height: 100px;
+      border: 1px solid red;
+
+    }
+  
   }
   p {
     font-size: 45px;
@@ -223,6 +227,7 @@ header {
     text-align: center;
     text-indent: 0px;
   }
+
   text-transform: uppercase;
   background-color:#F0F0F0;
 
