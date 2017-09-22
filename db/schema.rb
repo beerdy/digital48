@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170829111646) do
+ActiveRecord::Schema.define(version: 20170906114439) do
 
   create_table "clients", force: :cascade do |t|
     t.string   "title"
@@ -39,6 +39,63 @@ ActiveRecord::Schema.define(version: 20170829111646) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "group1s", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "slave"
+    t.string   "image_uid"
+    t.string   "image_name"
+    t.string   "url"
+    t.integer  "sort"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "group2s", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "slave"
+    t.string   "image_uid"
+    t.string   "image_name"
+    t.string   "url"
+    t.integer  "sort"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "group1_id"
+  end
+
+  add_index "group2s", ["group1_id"], name: "index_group2s_on_group1_id"
+
+  create_table "group3s", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "slave"
+    t.string   "image_uid"
+    t.string   "image_name"
+    t.string   "url"
+    t.integer  "sort"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "group2_id"
+  end
+
+  add_index "group3s", ["group2_id"], name: "index_group3s_on_group2_id"
+
+  create_table "group4s", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "slave"
+    t.string   "image_uid"
+    t.string   "image_name"
+    t.string   "url"
+    t.integer  "sort"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "group3_id"
+  end
+
+  add_index "group4s", ["group3_id"], name: "index_group4s_on_group3_id"
 
   create_table "messages", force: :cascade do |t|
     t.string   "name"

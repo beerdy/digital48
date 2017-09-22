@@ -1,11 +1,19 @@
+
 #utilize,#footer {
   background-color: #F8F8F8;
 }
 #service {
   background-image: url(background.jpg)
 }
+
 #menu {
   background-color: #FFF; 
+}
+#myiFrame {
+  position: absolute;
+}
+.content {
+  background-color: #fff;
 }
 
 hr {
@@ -59,7 +67,7 @@ h2 small {
 legend {
   h2 span {
     border-bottom: 2px solid #2C6EBD;
-    padding-bottom: 10px;
+    //padding-bottom: 10px;
   }
 }
 
@@ -88,19 +96,7 @@ header {
   }
 }
 .logo {
-  min-width: 300px;
-  min-height: 80px;
-  background-repeat: no-repeat;
-  border: 1px solid white;
-  a {
-    position:absolute;
-    display: block;
-    min-width: 300px;
-    min-height: 80px;
-  }
-  a:hover,a:focus {
-    cursor: pointer;
-  }
+
 }
 .form-control[type=submit] {
   background-color: #2C6EBD !important;
@@ -109,8 +105,8 @@ header {
   background-color: #9fc960 !important;
   color: #fff;
 }
-.fa {
-  color: #2C6EBD !important;
+.fa-laptop {
+  color: white ;
 }
 
 .social {
@@ -196,9 +192,7 @@ header {
     text-align: center;
   }
   .shead {
-    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    margin-top: -14px;
     color: white;
     background-color: #2C6EBD;
     display: inline-block;
@@ -213,9 +207,64 @@ header {
       color: #fff;
     }
   }
+  .container-fluid {
+    margin-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .shead, .hblocks {
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+  }
+  .hblocks {
+    background-color: #EEEEEE;
+    padding: 0;
+    div {min-height: 54px;}
+    p {
+      padding-top: 8px;
+      font-size:20px;
+      text-transform: uppercase;
+    }
+    a {
+      color: #23527C;
+    }
+    a:focus, a:hover {
+      color: #333;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        background-color: #47A3DA;
+        border: 1px solid #EEEEEE;
+        transition: all 0.3s ease-in-out; 
+        -webkit-transition: all 0.3s ease-in-out;
+        
+          color: #fff;
+          border: 1px solid #EEEEEE;
+          width: 100%;
+          padding: 18px 0 18px 0;
+        
+        padding: 14px;
+      }
+      li:before {
+        content: "\f101\00A0";
+        font-family: FontAwesome;
+        color: #E8F380;
+      }
+      li:hover, li:focus {
+        background-color: #fff;
+          color: #2C6EBD;
+
+      }
+    }
+  }
   p {
+    padding: 0;
+    margin: 0;
     font-size: 45px;
-    font-weight: 700;
+    font-weight: 400;
     font-style: normal;
     font-variant: normal;
     text-transform: none;
@@ -263,9 +312,6 @@ header {
 
 /*-- TextWrap --*/
 #pageWrap {
-  .container div {
-    margin: 0;
-  }
   /*-- For opacity --*/
   .page-header {
     background-position: center;
@@ -273,11 +319,12 @@ header {
     width: 100%;
     display: block;
     position: relative;
+    margin: 0px;
   }
   .page-header::after {
     content: "";
-    background: url(/assets/backslide.gif);
-    opacity: 1;
+    background-color: #fff;
+    //background: url(/assets/backslide.gif);
     top: 0;
     left: 0;
     bottom: 0;
@@ -306,6 +353,7 @@ header {
       margin: 0 auto;
     }
     padding: 30px 0 60px 0;
+    margin: 0 24px 0 24px;
     strong { color: #2A6082; }
     li {
       list-style: none;
@@ -386,8 +434,7 @@ td[colspan] {
     padding-top: 18px;
     font-size: 26px;
   }
-}
-/*-- // Clients --*/
+}/*-- // Clients --*/
 
 /*-- Footer --*/
 #footer {
@@ -406,7 +453,7 @@ td[colspan] {
   }
   form input[type="submit"] {
     background-color: #47A3DA;
-    color: white;
+    color: #ffffff !important;
     border: none;
   }
   form input[type="submit"]:hover {
@@ -416,6 +463,12 @@ td[colspan] {
      color: #999999;
   }
 }
+aside .arrow:before {
+  display: block;
+  color: #47A3DA;
+  background-color: #F8F8F8;
+}
+
 /*-- //Footer --*/
 
 /*-----------------------------------------------------------------------------------*/
@@ -426,14 +479,14 @@ td[colspan] {
 @media screen and (max-width: 1000px) {
   header {
     .phone {
-      font-size: 2.0em;
+
     }
   }
 }
 @media screen and (max-width: 768px) {
   header {
     .phone {
-      margin: 80px 0 10px;
+
     }
   }
   .cbp-hrmenu {
@@ -448,23 +501,9 @@ td[colspan] {
   }
 }
 @media screen and (max-width: 400px) {
-  header {
-    padding: 0 !important;
-  }
-  .logo {
-    margin: 10px 0 0px 25px;
-    background-size: 80%;
-    min-height: 70px;
-    min-width: 235px;
-  }
-  .cbp-hrmenu {
-    margin-top: 10px;
-  }
 }
 @media screen and (max-width: 310px) {
   .logo {
-    background-size: 99%;
-    margin: 10px 0 0px 0px;
   }
 }/* -- //LOGO -- */
 

@@ -16,6 +16,7 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/ico/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/ico/favicon-16x16.png">
   <link rel="manifest" href="/assets/ico/manifest.json">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/assets/ico/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -33,323 +34,83 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
-
+  <%= csrf_meta_tags %>
 </head>
-<body>
-  <!-- /.preloader -->
-  <div id="preloader"></div>
+<body style="background-image: url('<%=@background_body.image.url%>')">
+<section id="container" class="">
+  <!-- /.preloader 
+  <div id="preloader"></div>-->
   <%=@cert.description.html_safe%> 
-  <!-- MENU -->
-  <section id="menu">
-      <div class="container">
-        <header class="clearfix">
-          <style type="text/css">
-            .logo {
-              background-image: url(<%=@logo.image.url%>);
-            }
-          </style>
-            <div class="logo">
-              <a id='indexpage' onclick="return goTo('/company/index');"></a>
-              <%=@phoneheader.description.html_safe%>
-            </div>
-            <nav class="social">
-              <div><a href=""><i class="fa fa-vk" aria-hidden="true"></i></a></div>
-              <div><a href=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></div>
-              <div><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
-            </nav>
-        </header> 
-        <div class="main" id="mainmenu">
-          <nav id="cbp-hrmenu" class="cbp-hrmenu">
-            <ul>
-              <li>
-                <a href="#">Информация</a>
-                <div class="cbp-hrsub">
-
-                  <div class="cbp-hrsub-inner"> 
-                    <div>
-                      <h4>Общая информация</h4>
-                      <ul>
-                        <li><a href="/pages/aboutcompany">О компании</a></li>
-                        <li><a href="/reviews">Отзывы</a></li>
-                        <li><a href="/pages/parthners">Партнеры</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>Наша работа</h4>
-                      <ul>
-                        <li><a href="/pages/specialists">Квалификация</a></li>
-                        <li><a href="/pages/portfolios">Реализованные проекты</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>Контактная информация</h4>
-                      <ul>
-                        <li><a href="/messages">Обратная связь && Реквезиты</a></li>
-                      </ul>
-                    </div>
-                  <div>
-
-                </div>
-              </li>
-              <li>
-                <a href="#">ИТ Аутсорсинг</a>
-                <div class="cbp-hrsub">
-                  <div class="cbp-hrsub-inner">
-
-                    <div>
-                      <h4>Обслуживание & Ремонт</h4>
-                      <ul>
-                        <li><a href="/pages/orgtechnic">Офисная оргтехника</a>
-                        <li><a href="/pages/servicepark">Персональный Компьютер</a>
-                        <li><a href="/pages/osservise">ОС Windows, Linux, Unix, Mac OSx</a>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>ИТ Решения</h4>
-                      <ul>
-                        <li><a href="/pages/clusterandserver">Сервера & Кластеризация</a></li>
-                        <li><a href="/pages/data">Восстановление, Архивация, Защита данных</a></li>
-                        <li><a href="/pages/remoteservicepc">«Удаленка»</a></li>
-                        <li><a href="/pages/atc">Телефония</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>Консалтинг & Оценка</h4>
-                      <ul>
-                        <li><a href="/pages/consaltkey">Консалтинг «Решение под ключ»</a></li>
-                        <li><a href="/pages/consaltpc">Рабочее место сотрудника</a></li>
-                        <li><a href="/pages/consaltorg">Офисная оргтехника</a></li>
-                      </ul>
-                    </div>
-
-                    <!--
-                    <div>
-                      <h4>Games</h4>
-                      <ul>
-                        <li><a href="#">Catch the Bullet</a></li>
-                        <li><a href="#">Snoopydoo</a></li>
-                        <li><a href="#">Fallen Angel</a></li>
-                        <li><a href="#">Sui Maker</a></li>
-                        <li><a href="#">Wave Master</a></li>
-                        <li><a href="#">Golf Pro</a></li>
-                      </ul>
-                    </div>
-                    -->
-                  </div><!-- /cbp-hrsub-inner -->
-                </div><!-- /cbp-hrsub -->
-              </li>
-              <li>
-                <a href="#">Частному Лицу</a>
-                <div class="cbp-hrsub">
-                  <div class="cbp-hrsub-inner"> 
-                    <div>
-                      <h4>Компьютерная техника</h4>
-                      <ul>
-                        <li><a href="/pages/chastpc#buy">Консультация при покупке</a></li>
-                        <li><a href="/pages/chastpc#card">Ремонт видеокарты</a></li>
-                        <li><a href="/pages/chastpc#complect">Сборка ПК</a></li>
-                        <li><a href="/pages/chastpc#po">Установка ПО</a></li>
-                        <li><a href="/pages/chastpc#repair">Ремонт ПК</a></li>
-                        <li><a href="/pages/chastpc#update">Апгрейд ПК</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>Оргтехника</h4>
-                      <ul>
-                        <li><a href="/pages/chastorg#repair">Ремонт</a></li>
-                        <li><a href="/pages/chastorg#diag">Диагностика</a></li>
-                        <li><a href="/pages/chastorg#clean">Чистка</a></li>
-                        <li><a href="/pages/chastorg#charge">Заправка картриджей</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>Смартфоны и планшеты</h4>
-                      <ul>
-                        <li><a href="/pages/smart#akb">Замена АКБ</a></li>
-                        <li><a href="/pages/smart#lcd">Замена Дисплея</a></li>
-                        <li><a href="/pages/smart#connector">Ремонт (перепайка) разъемов</a></li>
-                        <li><a href="/pages/smart#motherboard">Ремонт материнской платы</a></li>
-                        <li><a href="/pages/smart#power">Ремонт блока питания</a></li>
-                        <li><a href="/pages/smart#unlock">Разблокировка</a></li>
-                        <li><a href="/pages/smart#update">Обновление ПО</a></li>
-                        <li><a href="/pages/smart#firmware">Прошивка - все платформы</a></li>
-                      </ul>
-                    </div>
-                  </div><!-- /cbp-hrsub-inner -->
-                </div><!-- /cbp-hrsub -->
-              </li>
-              <li>
-                <a href="#">Аренда & Магазин</a>
-                <div class="cbp-hrsub">
-                  <div class="cbp-hrsub-inner"> 
-                    <div>
-                      <h4>Магазин</h4>
-                      <ul>
-                        <li><a href="/pages/store#material">Расходные материалы</a></li>
-                        <li><a href="/pages/store#proftech">Профессиональная и офисная техника</a></li>
-                        <li><a href="/pages/store#network">Сетевое оборудование</a></li>
-                        <li><a href="/pages/store#pc">ПК и комплектующие</a></li>
-                        <li><a href="/pages/store#server">Серверное оборудование</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>Аренда Техники</h4>
-                      <ul>
-                        <li><a href="/pages/rent#office">Офисная техника</a></li>
-                        <li><a href="/pages/rent#production">Промышленное оборудование</a></li>
-                        <li><a href="/pages/rent#server">Серверное оборудование</a></li>
-                        <li><a href="/pages/rent#network">Сетевое оборудование</a></li>
-                      </ul>
-                    </div>
-                  </div><!-- /cbp-hrsub-inner -->
-                </div><!-- /cbp-hrsub -->
-              </li>
-              <li>
-                <a href="#">Утилизация</a>
-                <div class="cbp-hrsub">
-                  <div class="cbp-hrsub-inner"> 
-                    <div>
-                      <h4>Утилизация</h4>
-                      <ul>
-                        <li><a href="/pages/utilize">Утилизируем технику & Мебель</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div><!-- /cbp-hrsub -->
-              </li>
-              <li>
-                <a href="#">Наши Цены</a>
-                <div class="cbp-hrsub">
-                  <div class="cbp-hrsub-inner"> 
-                    <div>
-                      <h4>Копировально Множительная Техника</h4>
-                      <ul>
-                        <li><a href="/prices/1">Копировальные аппараты</a></li>
-                        <li><a href="/prices/4">Ризографы</a></li>
-                        <li><a href="/prices/2">Принтеры</a></li>
-                        <li><a href="/prices/3">Факсы</a></li>
-                      </ul>
-                      <h4>Компьютерная техника</h4>
-                      <ul>
-                        <li><a href="/prices/8">Серверное оборудование</a></li>
-                        <li><a href="/prices/9">Системные блоки</a></li>                      
-                        <li><a href="/prices/7">Ноутбуки</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>Заправка и восстановление картриджей</h4>
-                      <ul>
-                        <li><a href="/prices/13">Hewlett-Packard</a></li>
-                        <li><a href="/prices/14">Canon</a></li>
-                        <li><a href="/prices/15">Samsung</a></li>
-                        <li><a href="/prices/16">Xerox</a></li>
-                        <li><a href="/prices/17">Kyocera–Mita</a></li>
-                        <li><a href="/prices/18">Цветная лазерная печать</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>Мобильные устройства</h4>
-                      <ul>
-                        <li><a href="/prices/10">Смартфоны & планшеты</a></li>
-                        <li><a href="/prices/11">Электронные книги</a></li>
-                      </ul>
-                      <h4>Прочее</h4>
-                      <ul>
-                        <li><a href="/prices/5">Мониторы</a></li>
-                        <li><a href="/prices/6">ИБП</a></li>
-                        <li><a href="/prices/12">Периферия | Настройка | Данные</a></li>
-                      </ul>
-                    </div>
-
-                  </div><!-- /cbp-hrsub-inner -->
-                </div><!-- /cbp-hrsub -->
-              </li>
-              <!--
-              <li>
-                <a href="#">Картриджи цены</a>
-                <div class="cbp-hrsub">
-                  <div class="cbp-hrsub-inner"> 
-                    <div>
-                      <h4>Офисная техника</h4>
-                      <ul>
-                        <li><a href="#">Принтеры, МФУ, Копиры</a></li>
-                        <li><a href="#">Персональные Компьютеры</a></li>
-                        <li><a href="#">Коммутационное оборудование</a></li>
-                      </ul>
-                      <h4>Промышленное оборудование</h4>
-                      <ul>
-                        <li><a href="#">Принтеры, МФУ, Копиры</a></li>
-                        <li><a href="#">Серверное оборудование</a></li>
-                        <li><a href="#">Спецтехника</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>Сетевое оборудование</h4>
-                      <ul>
-                        <li><a href="#">Коммутаторы, роутеры</a></li>
-                        <li><a href="#">WI-FI роуминг станции</a></li>
-                        <li><a href="#">Коммутационные шкафы</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>-->
-            </ul>
-          </nav>
-        </div>
+  <!-- // MAIN MENU -->
+  <header class="main_h">
+      <a class="logo" href="/"><%= image_tag @logo.image.url, alt: @logo.description, height: '70' %><span><i aria-hidden="true" class="fa fa-phone"></i> 7 4742 35 63 10</span></a>
+      <div class="mobile-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
+      <nav>
+        <ul>
+          <li><a href=".sec01">УСЛУГИ & ЦЕНЫ</a></li>
+          <li><a href=".sec02">О КОМПАНИИ</a></li>
+          <li><a href=".sec03">КОНТАКТЫ</a></li>
+          <li><a href=".sec03">ИНФОРМАЦИЯ</a></li>
+        </ul>
+      </nav>
+  </header>
 
-  </section>
-  <!-- // MENU -->
-  <hr style="border-bottom: 4px solid #47a3da;">
-  <%= yield %>
-  <hr style="border-bottom: 4px solid #47a3da;">
-  <section id="footer">
-    <!-- CONTAINER -->
-    <div class="container">
-    <!-- ROW -->
-      <div class="row animated fadeInUp" data-appear-top-offset="-200" data-animated="fadeInUp">
-        <div class="col-lg-4 col-md-4 col-sm-6 padbot30 adress">
-          <h4><b>Контакты</b> Местоположение</h4>
-          <%=@worktime.slave.html_safe%>
-          <div class="padbot30"></div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 padbot30">
-          <h4><b>Часы</b> работы</h4>
-          <div class="recent_posts_small clearfix">
-            <div class="time">
-              <%=@worktime.description.html_safe%>
-              <br><i style="font-size: 7pt">* праздничные дни являются сокращенными - часы работы уточняйте по телефону</i>
+  <!-- !!! -->
+  <%= yield :aside %>
+  <!-- <section id="main-content">||<section id="index-content"> --><!-- in yield -->
+  <!-- !!! -->
+
+    <%= yield %>
+    <hr style="border-bottom: 4px solid #47a3da;">
+    <section id="footer">
+      <!-- CONTAINER -->
+      <div class="container">
+      <!-- ROW -->
+        <div class="row animated fadeInUp" data-appear-top-offset="-200" data-animated="fadeInUp">
+          <div class="col-lg-4 col-md-4 col-sm-6 padbot30 adress">
+            <h4><b>Контакты</b> Местоположение</h4>
+            <%=@worktime.slave.html_safe%>
+            <div class="padbot30"></div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 padbot30">
+            <h4><b>Часы</b> работы</h4>
+            <div class="recent_posts_small clearfix">
+              <div class="time">
+                <%=@worktime.description.html_safe%>
+                <br><i style="font-size: 7pt">* праздничные дни являются сокращенными - часы работы уточняйте по телефону</i>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="respond_clear"></div>
-        <div class="col-lg-4 col-md-4 padbot30">
-          <h4><b>Напишите</b> Нам</h4>
-          <!-- CONTACT FORM -->
-          <div class="span9 contact_form">
-            <div id="note"></div>
-            <div id="fields">
-              <%= form_for @message, html: { id: "contact-form-face", class: "clearfix" } do |f| %>
-                <input class="form-control" name="message[name]" value="Имя" onfocus="if (this.value == 'Имя') this.value = '';" onblur="if (this.value == '') this.value = 'Имя';" type="text">
-                <textarea class="form-control" name="message[description]" onfocus="if (this.value == 'Сообщение') this.value = '';" onblur="if (this.value == '') this.value = 'Сообщение';">Сообщение</textarea>
-                <input class="form-control" value="Отправить сообщение" type="submit">
-              <%end%>
-            </div>
-          </div><!-- //CONTACT FORM -->
-        </div>
-      </div><!-- //ROW -->
-      <div class="row copyright">
-        <div class="col-lg-12 text-center">
-          <p><br>&copy; «ДИДЖИТАЛ-Сервис» - Права защищены законом РФ. Разработано <i class="fa fa-heart"></i> <a href="#" class="developed">ОткликПавэр</a></p>
-        </div>
-      </div><!-- //ROW -->
-    </div><!-- //CONTAINER -->
+          <div class="respond_clear"></div>
+          <div class="col-lg-4 col-md-4 padbot30">
+            <h4><b>Напишите</b> Нам</h4>
+            <!-- CONTACT FORM -->
+            <div class="span9 contact_form">
+              <div id="note"></div>
+              <div id="fields">
+                <%= form_for @message, html: { id: "contact-form-face", class: "clearfix" } do |f| %>
+                  <input class="form-control" name="message[name]" value="Имя" onfocus="if (this.value == 'Имя') this.value = '';" onblur="if (this.value == '') this.value = 'Имя';" type="text">
+                  <textarea class="form-control" name="message[description]" onfocus="if (this.value == 'Сообщение') this.value = '';" onblur="if (this.value == '') this.value = 'Сообщение';">Сообщение</textarea>
+                  <input class="form-control" value="Отправить сообщение" type="submit">
+                <%end%>
+              </div>
+            </div><!-- //CONTACT FORM -->
+          </div>
+        </div><!-- //ROW -->
+        <div class="row copyright">
+          <div class="col-lg-12 text-center">
+            <p><br>&copy; «ДИДЖИТАЛ-Сервис» - Права защищены законом РФ. Разработано <i class="fa fa-heart"></i> <a href="#" class="developed">ОткликПавэр</a></p>
+          </div>
+        </div><!-- //ROW -->
+      </div><!-- //CONTAINER -->
+    </section>
   </section>
-
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
-<%= csrf_meta_tags %>
-<%= @footer.description.html_safe %>
-
+<% @footer.description.html_safe %>
+</section>
 </body>
 </html>

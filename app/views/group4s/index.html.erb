@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Group4s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Slave</th>
+      <th>Image uid</th>
+      <th>Image name</th>
+      <th>Url</th>
+      <th>Sort</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @group4s.each do |group4| %>
+      <tr>
+        <td><%= group4.title %></td>
+        <td><%= group4.description %></td>
+        <td><%= group4.slave %></td>
+        <td><%= group4.image_uid %></td>
+        <td><%= group4.image_name %></td>
+        <td><%= group4.url %></td>
+        <td><%= group4.sort %></td>
+        <td><%= link_to 'Show', group4 %></td>
+        <td><%= link_to 'Edit', edit_group4_path(group4) %></td>
+        <td><%= link_to 'Destroy', group4, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group4', new_group4_path %>

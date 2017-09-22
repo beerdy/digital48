@@ -1,3 +1,15 @@
+<!-- HEAD BANER -->
+<iframe id="myiFrame" src="/pages" style="border:0px;-webkit-overflow-scrolling: touch;overflow: auto; fub;" name="myiFrame" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" height="551" width="100%" seamless=""></iframe>
+<div class="hero">
+  <h1><span>Авторизированная сервисная компания</span><br>Мы ценим Ваше время</h1>
+  <div class="inner text-center">
+    <h1>
+      <%= @slogan.description.html_safe %>
+    </h1>
+  </div>
+</div><!-- // HEAD BANER -->
+<hr style="border-bottom: 4px solid #47a3da;">
+
 <section id="sliderWrap">
   <div class="container ">
     <div id="metaslider" class="flexslider">
@@ -18,50 +30,30 @@
 </section>
 
 <section id="slogan">
-    <div class="inner text-center">
-      <h1>
-        <%= @slogan.description.html_safe %>
-      </h1>
-    </div>
+
 </section>
 <hr><br>
 <section id="service">
-  <div class="swrapper">    
-    <div class="shead"><p>&nbsp&nbsp<i class="fa fa-laptop" aria-hidden="true"></i>&nbsp&nbsp&nbspНАШИ УСЛУГИ&nbsp&nbsp</p></div>
+  <div class="swrapper">
+    <div class="shead sec01"><p>&nbsp&nbsp<i class="fa fa-laptop" aria-hidden="true"></i>&nbsp&nbsp&nbspНАШИ УСЛУГИ&nbsp&nbsp</p></div>
   </div>
-  <div class="container">
-    <div class="row">
-      <!-- Services -->
-        <div class="col-md-6 sblocks">
- 
-
-          <p><i class="fa fa-user" aria-hidden="true"></i>ЧАСТНЫМ КЛИЕНТАМ</p>
-          <ul>
-            <li>Ремонт смартфонов, планшетов и электронных книг</li>
-            <li>Ремонт компьютеров и ноутбуков</li>
-            <li>Ремонт принтеров, МФУ и сканеров</li>
-            <li>Продажа расходных материалов</li>
-            <li>Заправка, восстановление и экспресс-обмен картриджей</li>
-          </ul>
-
-        </div>
-        <div class="col-md-6 sblocks">
-          <p><i class="fa fa-users" aria-hidden="true"></i>ОРГАНИЗАЦИЯМ</p>
-
-          <ul>
-            <li>Консалтинг офисной техники</li>
-            <li>IT - Аутсорсинг</li>
-            <li>Контроль и управление печатью</li>
-            <li>Обслуживание и ремонт серверного оборудования</li>
-            <li>Продажа офисной и профессиональной техники</li>
-          </ul>
-
-        </div>
-      <!-- portfolio -->
+  
+  <div class="container-fluid">
+    <% @count = 0; @master_group.each do |group1| %>
+    <%= @count>=3? (@count=1;'</div><div class="row">'.html_safe) : (@count+=1;'') %>
+    <div class="col-md-4">
+      <div class="hblocks">
+        <div><p><i class="fa fa-user" aria-hidden="true"></i><a href="/group1s/<%=group1.id%>"> <%=group1.title%></p></div>
+        <ul>
+          <% group1.group2.each do |group2|%>
+          <a href="/group2s/<%=group2.id%>"><li><%=group2.title%></li></a>
+          <%end%>
+        </ul>
+      </div>
     </div>
+    <%end%>
+  </div>  
 </section>
-
-
 
 <section id='utilize'>
   <div class="container margtop30">
@@ -87,7 +79,7 @@
 <section id='clients'>
   <div class="container margbottom30 margtop30">
     <legend><h2 class="block-title">
-      <span><b>Мы</b> Работаем</span> <small><a href="#">Наши лиенты</a></small>
+      <span><b>Мы</b> Работаем</span> <small><a href="#">Наши клиенты</a></small>
     </h2></legend>
 
     <!-- CARUSEL - Our Clients-->

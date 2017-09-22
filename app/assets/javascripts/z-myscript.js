@@ -4,6 +4,11 @@ function goTo( link ){
 }
 
 jQuery(document).ready(function($) {  
+  
+  setTimeout(function(){
+    document.getElementById("group3-8").click();
+  },1000);
+  
   // init carusel
   $('.carousel').carousel();
   
@@ -28,5 +33,6 @@ jQuery(document).ready(function($) {
   }, 1000);
   jQuery('#preloader').fadeOut('slow',function(){$(this).remove();});
   // END preloader
-  
+
+
 });

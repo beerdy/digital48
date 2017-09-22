@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  resources :group4s
+  resources :group3s
+  resources :group2s
+  resources :group1s
   devise_for :users
   get 'company/index'
 

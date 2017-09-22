@@ -1,0 +1,12 @@
+<% content_for :title, " | #{@content.title} | #{@content.group} | " %>
+
+<section id="pageWrap">
+  <div class="page-text container-fluid">
+      <legend><h2 class="block-title">
+        <span><b><%=@content.first_word%></b> <%=@content.second_word%>&nbsp</span> <small><a href="<%=@content.parent.link%>"><%=@content.parent.name%></a></small>
+      </h2></legend>
+      <div class="content">
+        <%= @content.html.html_safe %>
+      </div>
+  </div>
+</section>
