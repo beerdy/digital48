@@ -125,6 +125,7 @@ class ApplicationController < ActionController::Base
       @cert = c if c.url == 'cert'
       @phoneheader = c if c.url == 'phoneheader'
       @background_body = c if c.url == 'background_body'
+      @mobile_background = c if c.url == 'mobile_background'
     end
   end
 end

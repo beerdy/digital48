@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   def index
     render layout: false
     @pages = Page.all
+
   end
 
   # GET /pages/1
@@ -27,5 +28,8 @@ class PagesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
       params.require(:page).permit(:title, :description, :slave, :image_uid, :image_name, :url, :sort)
+    end
+    def is_mobile_request?
+      request.host == "mobile.app.com"
     end
 end
