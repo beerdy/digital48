@@ -1,0 +1,229 @@
+  <div class="container">
+    <header class="clearfix">
+      <style type="text/css">
+        .logo {
+          background-image: url(<%=@logo.image.url%>);
+        }
+      </style>
+        <div class="logo">
+          <a id='indexpage' onclick="return goTo('/company/index');"></a>
+          <%=@phoneheader.description.html_safe%>
+        </div>
+        <nav class="social">
+          <div><a href=""><i class="fa fa-vk" aria-hidden="true"></i></a></div>
+          <div><a href=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></div>
+          <div><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+        </nav>
+    </header> 
+    <div class="main" id="mainmenu">
+      <nav id="cbp-hrmenu" class="cbp-hrmenu">
+        <ul>
+          <li>
+            <a href="#">Информация</a>
+            <div class="cbp-hrsub">
+
+              <div class="cbp-hrsub-inner"> 
+                <div>
+                  <h4>Общая информация</h4>
+                  <ul>
+                    <li><a href="/pages/aboutcompany">О компании</a></li>
+                    <li><a href="/reviews">Отзывы</a></li>
+                    <li><a href="/pages/parthners">Партнеры</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Наша работа</h4>
+                  <ul>
+                    <li><a href="/pages/specialists">Квалификация</a></li>
+                    <li><a href="/pages/portfolios">Реализованные проекты</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Контактная информация</h4>
+                  <ul>
+                    <li><a href="/messages">Обратная связь && Реквезиты</a></li>
+                  </ul>
+                </div>
+              <div>
+
+            </div>
+          </li>
+          <li>
+            <a href="#">ИТ Аутсорсинг</a>
+            <div class="cbp-hrsub">
+              <div class="cbp-hrsub-inner">
+
+                <div>
+                  <h4>Обслуживание & Ремонт</h4>
+                  <ul>
+                    <li><a href="/pages/orgtechnic">Офисная оргтехника</a>
+                    <li><a href="/pages/servicepark">Персональный Компьютер</a>
+                    <li><a href="/pages/osservise">ОС Windows, Linux, Unix, Mac OSx</a>
+                  </ul>
+                </div>
+                <div>
+                  <h4>ИТ Решения</h4>
+                  <ul>
+                    <li><a href="/pages/clusterandserver">Сервера & Кластеризация</a></li>
+                    <li><a href="/pages/data">Восстановление, Архивация, Защита данных</a></li>
+                    <li><a href="/pages/remoteservicepc">«Удаленка»</a></li>
+                    <li><a href="/pages/atc">Телефония</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Консалтинг & Оценка</h4>
+                  <ul>
+                    <li><a href="/pages/consaltkey">Консалтинг «Решение под ключ»</a></li>
+                    <li><a href="/pages/consaltpc">Рабочее место сотрудника</a></li>
+                    <li><a href="/pages/consaltorg">Офисная оргтехника</a></li>
+                  </ul>
+                </div>
+
+                <!--
+                <div>
+                  <h4>Games</h4>
+                  <ul>
+                    <li><a href="#">Catch the Bullet</a></li>
+                    <li><a href="#">Snoopydoo</a></li>
+                    <li><a href="#">Fallen Angel</a></li>
+                    <li><a href="#">Sui Maker</a></li>
+                    <li><a href="#">Wave Master</a></li>
+                    <li><a href="#">Golf Pro</a></li>
+                  </ul>
+                </div>
+                -->
+              </div><!-- /cbp-hrsub-inner -->
+            </div><!-- /cbp-hrsub -->
+          </li>
+          <li>
+            <a href="#">Частному Лицу</a>
+            <div class="cbp-hrsub">
+              <div class="cbp-hrsub-inner"> 
+                <div>
+                  <h4>Компьютерная техника</h4>
+                  <ul>
+                    <li><a href="/pages/chastpc#buy">Консультация при покупке</a></li>
+                    <li><a href="/pages/chastpc#card">Ремонт видеокарты</a></li>
+                    <li><a href="/pages/chastpc#complect">Сборка ПК</a></li>
+                    <li><a href="/pages/chastpc#po">Установка ПО</a></li>
+                    <li><a href="/pages/chastpc#repair">Ремонт ПК</a></li>
+                    <li><a href="/pages/chastpc#update">Апгрейд ПК</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Оргтехника</h4>
+                  <ul>
+                    <li><a href="/pages/chastorg#repair">Ремонт</a></li>
+                    <li><a href="/pages/chastorg#diag">Диагностика</a></li>
+                    <li><a href="/pages/chastorg#clean">Чистка</a></li>
+                    <li><a href="/pages/chastorg#charge">Заправка картриджей</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Смартфоны и планшеты</h4>
+                  <ul>
+                    <li><a href="/pages/smart#akb">Замена АКБ</a></li>
+                    <li><a href="/pages/smart#lcd">Замена Дисплея</a></li>
+                    <li><a href="/pages/smart#connector">Ремонт (перепайка) разъемов</a></li>
+                    <li><a href="/pages/smart#motherboard">Ремонт материнской платы</a></li>
+                    <li><a href="/pages/smart#power">Ремонт блока питания</a></li>
+                    <li><a href="/pages/smart#unlock">Разблокировка</a></li>
+                    <li><a href="/pages/smart#update">Обновление ПО</a></li>
+                    <li><a href="/pages/smart#firmware">Прошивка - все платформы</a></li>
+                  </ul>
+                </div>
+              </div><!-- /cbp-hrsub-inner -->
+            </div><!-- /cbp-hrsub -->
+          </li>
+          <li>
+            <a href="#">Аренда & Магазин</a>
+            <div class="cbp-hrsub">
+              <div class="cbp-hrsub-inner"> 
+                <div>
+                  <h4>Магазин</h4>
+                  <ul>
+                    <li><a href="/pages/store#material">Расходные материалы</a></li>
+                    <li><a href="/pages/store#proftech">Профессиональная и офисная техника</a></li>
+                    <li><a href="/pages/store#network">Сетевое оборудование</a></li>
+                    <li><a href="/pages/store#pc">ПК и комплектующие</a></li>
+                    <li><a href="/pages/store#server">Серверное оборудование</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Аренда Техники</h4>
+                  <ul>
+                    <li><a href="/pages/rent#office">Офисная техника</a></li>
+                    <li><a href="/pages/rent#production">Промышленное оборудование</a></li>
+                    <li><a href="/pages/rent#server">Серверное оборудование</a></li>
+                    <li><a href="/pages/rent#network">Сетевое оборудование</a></li>
+                  </ul>
+                </div>
+              </div><!-- /cbp-hrsub-inner -->
+            </div><!-- /cbp-hrsub -->
+          </li>
+          <li>
+            <a href="#">Утилизация</a>
+            <div class="cbp-hrsub">
+              <div class="cbp-hrsub-inner"> 
+                <div>
+                  <h4>Утилизация</h4>
+                  <ul>
+                    <li><a href="/pages/utilize">Утилизируем технику & Мебель</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div><!-- /cbp-hrsub -->
+          </li>
+          <li>
+            <a href="#">Наши Цены</a>
+            <div class="cbp-hrsub">
+              <div class="cbp-hrsub-inner"> 
+                <div>
+                  <h4>Копировально Множительная Техника</h4>
+                  <ul>
+                    <li><a href="/prices/1">Копировальные аппараты</a></li>
+                    <li><a href="/prices/4">Ризографы</a></li>
+                    <li><a href="/prices/2">Принтеры</a></li>
+                    <li><a href="/prices/3">Факсы</a></li>
+                  </ul>
+                  <h4>Компьютерная техника</h4>
+                  <ul>
+                    <li><a href="/prices/8">Серверное оборудование</a></li>
+                    <li><a href="/prices/9">Системные блоки</a></li>                      
+                    <li><a href="/prices/7">Ноутбуки</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Заправка и восстановление картриджей</h4>
+                  <ul>
+                    <li><a href="/prices/13">Hewlett-Packard</a></li>
+                    <li><a href="/prices/14">Canon</a></li>
+                    <li><a href="/prices/15">Samsung</a></li>
+                    <li><a href="/prices/16">Xerox</a></li>
+                    <li><a href="/prices/17">Kyocera–Mita</a></li>
+                    <li><a href="/prices/18">Цветная лазерная печать</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Мобильные устройства</h4>
+                  <ul>
+                    <li><a href="/prices/10">Смартфоны & планшеты</a></li>
+                    <li><a href="/prices/11">Электронные книги</a></li>
+                  </ul>
+                  <h4>Прочее</h4>
+                  <ul>
+                    <li><a href="/prices/5">Мониторы</a></li>
+                    <li><a href="/prices/6">ИБП</a></li>
+                    <li><a href="/prices/12">Периферия | Настройка | Данные</a></li>
+                  </ul>
+                </div>
+
+              </div><!-- /cbp-hrsub-inner -->
+            </div><!-- /cbp-hrsub -->
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr style="border-bottom: 4px solid #47a3da;">
+<!-- // MENU -->

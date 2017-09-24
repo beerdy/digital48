@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'slave/index'
+
   resources :group4s
   resources :group3s
   resources :group2s

@@ -106,7 +106,6 @@
   -ms-transition: all 1s ease;
   transition: all 1s ease;
 }
-
 @media (max-width: 767px) {
   .nsm-top {
     top: 10px !important;
@@ -144,7 +143,5 @@
     display: block;
   }
 }
-body {
-  margin: 0px;
-  padding: 0px;
-}
+@media (max-width: 478px) {.nsm-top {top: -10px !important;}}
+@media (max-width: 326px) {.nsm-top {top: -35px !important;}}
