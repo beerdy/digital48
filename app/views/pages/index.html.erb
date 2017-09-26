@@ -1,22 +1,4 @@
-<% if request.user_agent =~ /Mobile|webOS/ %>
-
-<style type="text/css">
-  body {
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
-  }
-  .mobile_background {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    top: 0px;
-    left: 0px;
-  }
-</style>
-
-<%= image_tag @mobile_background.image.url, alt: @mobile_background.title, class: 'mobile_background'  %>
-<%else%>
+<% unless request.user_agent =~ /Mobile|webOS/ %>
 <video loop="" preload="auto" muted="" autoplay="" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1000; background-size: cover;"> 
   <source src="assets/digital.webm" type="video/webm"> 
   <source src="assets/digital.mp4" type="video/mp4"> 

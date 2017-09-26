@@ -1,4 +1,9 @@
-<!-- HEAD BANER -->
+<% if request.user_agent =~ /Mobile|webOS/ %>
+
+<div class="hero-mobile">
+<%= image_tag @mobile_background.image.url, alt: @mobile_background.title, class: 'mobile_background img-responsive'  %>
+</div>
+<%else%>
 <iframe id="myiFrame" src="/pages" style="border:0px;-webkit-overflow-scrolling: touch;overflow: auto; margin: 0px; padding: 0px;" scrolling="no" width="100%"></iframe>
 <div class="hero">
   <h1><span>Авторизированная сервисная компания</span><br>Мы ценим Ваше время</h1>
@@ -8,6 +13,7 @@
     </h1>
   </div>
 </div><!-- // HEAD BANER -->
+<%end%>
 <hr style="border-bottom: 4px solid #47a3da;">
 
 <section id="sliderWrap">
