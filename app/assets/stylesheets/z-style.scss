@@ -442,7 +442,9 @@ header {
 td[colspan] {
   text-align: center;
 }
-
+table, td, tr {
+  word-break: break-all !important;
+}
 
 
 
