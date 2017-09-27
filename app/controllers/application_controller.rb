@@ -126,6 +126,7 @@ class ApplicationController < ActionController::Base
       @phoneheader = c if c.url == 'phoneheader'
       @background_body = c if c.url == 'background_body'
       @mobile_background = c if c.url == 'mobile_background'
+      @logo_baner = c if c.url == 'logo_baner'
     end
   end
 end
