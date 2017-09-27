@@ -243,7 +243,11 @@ header {
       font-size:20px;
       text-transform: uppercase;
     }
+    div>p>a {
+      font-weight: 600;
+    }
     a {
+
       color: #23527C;
     }
     a:focus, a:hover {
@@ -255,15 +259,15 @@ header {
       padding: 0;
       li {
         opacity: 0.8;
-        background-color: #47A3DA;
+        background-color: #2C6EBD;
         border: 1px solid #EEEEEE;
         transition: all 0.3s ease-in-out; 
         -webkit-transition: all 0.3s ease-in-out;
         
-          color: #fff;
-          border: 1px solid #EEEEEE;
-          width: 100%;
-          padding: 18px 0 18px 0;
+        color: #fff;
+        border: 1px solid #EEEEEE;
+        width: 100%;
+        padding: 18px 0 18px 0;
         
         padding: 14px;
       }
@@ -274,8 +278,7 @@ header {
       }
       li:hover, li:focus {
         background-color: #fff;
-          color: #2C6EBD;
-
+        color: #2C6EBD;
       }
     }
   }
@@ -443,6 +446,7 @@ td[colspan] {
   text-align: center;
 }
 table, td, tr {
+  color: #231F20;
   word-break: break-all !important;
 }
 

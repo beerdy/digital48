@@ -1,13 +1,14 @@
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
-  font-size: 12px;
-  font-weight: 200;
-  background-color: #2C6EBD;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: #ffffff;/*#2C6EBD;*/
   position: fixed;
   top: 27px;
   width: 300px;
   height: 100%;
+  border-right: 1px solid #2C6EBD;
 
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -21,7 +22,7 @@
   line-height: 50px;
   display: block;
   text-align: center;
-  font-size: 14px;
+  text-decoration: uppercase;
   color: #ffffff;
 }
 .nav-side-menu .brand a span { text-decoration: underline; color: #ffffff; }
@@ -56,7 +57,7 @@
   background-color: #F8F8F8;
   border: none;
   line-height: 28px;
-  border-bottom: 1px solid #23282e;
+  /* border-bottom: 1px solid #23282e;*/
   margin-left: 0px;
 }
 .menu-list {
@@ -78,7 +79,7 @@
 .nav-side-menu li {
   padding-left: 0px;
   border-left: 3px solid #2e353d;
-  border-bottom: 1px solid #23282e;
+  /*border-bottom: 1px solid #23282e;*/
 }
 .nav-side-menu li:hover a, .nav-side-menu li a:hover{color: #ffffff;}
 .nav-side-menu li {
@@ -130,7 +131,6 @@
   }
   .brand {
     text-align: left !important;
-    font-size: 22px;
     padding-left: 20px;
     line-height: 50px !important;
   }
