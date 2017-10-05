@@ -3,8 +3,15 @@ function goTo( link ){
   return false;
 }
 
-jQuery(document).ready(function($) {  
   
+jQuery(document).ready(function($) {  
+
+  // Start FLEXSlider
+  jQuery('.flexslider').flexslider({
+    animation: "slide"
+  });
+  // END FLEXSlider
+
   setTimeout(function(){
     document.getElementById("group3-8").click();
   },1000);
@@ -12,24 +19,6 @@ jQuery(document).ready(function($) {
   // init carusel
   $('.carousel').carousel();
   
-  // Start FLEXSlider
-  jQuery('.flexslider').flexslider({
-    animation: "slide"
-  });
-  // END FLEXSlider
-  
-  // Menu
-  cbpHorizontalMenu.init();
-  // END Menu
-
-
-  // Start FLEXSlider
-  jQuery('.flexslider').flexslider({
-    animation: "slide"
-  });
-  // END FLEXSlider
-
-
   //preloader
   setTimeout(function(){
       $("#timer51029eaee7c27d9df0fd78bb15c7eb75").css("min-width","50px");
