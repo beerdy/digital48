@@ -12,9 +12,10 @@ jQuery(document).ready(function($) {
   });
   // END FLEXSlider
 
+  /*
   setTimeout(function(){
     document.getElementById("group3-8").click();
-  },1000);
+  },1000); */
   
   // init carusel
   $('.carousel').carousel();
