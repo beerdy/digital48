@@ -37,6 +37,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body style="background-image: url('<%=@background_body.image.url%>')">
+
+<!-- The Modal -->
+<!-- For use modal <img class="gallery-img" src="<%=%>" alt="<%=%>" height="auto"> // For use modal-->
+<div id="modalWarpaper" class="modal" style="z-index: 9999">
+  <span class="closeModal">&times;</span>
+  <img id="imgWarpaper">
+  <div id="captionText"></div>
+</div><!-- // The Modal -->
+
 <section id="container" class="">
   <!-- /.preloader 
   <div id="preloader"></div>-->

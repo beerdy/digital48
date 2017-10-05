@@ -61,8 +61,15 @@
 <section id='aboutcompany'>
   <div class="container margtop30 aboutcompany">
     <legend><h2 class="block-title">
-      <span><b>О</b> Компании</span> <small><a href="javascript:void(0);">наши цели</a></small>
+      <span><b>О</b> Компании</span> <small><a href="/certificates">все сертификаты</a></small>
     </h2></legend>
+    <%=@aboutcompany.slave.html_safe%>
+    <%@cert_company.sort_by(&:sort).take(4).each do |cert| %>
+      <div class="col-sm-3">
+        <%= image_tag cert.image.url, class: 'img-responsive gallery-img', alt: cert.title if cert.image_stored? %>
+      </div>
+    <%end%>
+    <div style="clear: both;padding-top: 24px;"></div>
     <%=@aboutcompany.description.html_safe%>
   </div>
 </section>
@@ -78,7 +85,7 @@
     </h2></legend>
     <%=@utilize.title.html_safe%>
     <div class="row margtop30">
-      <div class="col-sm-6 utilize"><%=image_tag @utilize.image.url, class: 'img-responsive', alt: @utilize.title %></div>
+      <div class="col-sm-6 utilize"><%=image_tag @utilize.image.url, class: 'img-responsive gallery-img', alt: @utilize.title %></div>
       <div class="col-sm-6 nice-buttons">
         <div class="margtop70"><%=@utilize.description.html_safe%></div>
         <div class="buttons">
@@ -102,7 +109,7 @@
 <section id='clients'>
   <div class="container margbottom30 margtop30">
     <legend><h2 class="block-title">
-      <span><b>Мы</b> Работаем</span> <small><a href="#">Наши клиенты</a></small>
+      <span><b>Наши</b> Клиенты</span> <small><a href="/reviews">мнения клиентов</a></small>
     </h2></legend>
 
     <!-- CARUSEL - Our Clients-->

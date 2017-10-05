@@ -106,6 +106,21 @@ class ApplicationController < ActionController::Base
     content
     @aboutcompany = Page.where(url: 'aboutcompany').first
     @message = Message.new
+    
+    cert_read( Certificate.all )
+  end
+
+  def cert_read data
+    @cert_company = []
+    @cert_people = []
+    data.each_with_index { |c,index| 
+      c.sort = 99999 if c.sort == nil
+      if c.people == nil or c.people == false
+        @cert_company << c
+      else
+        @cert_people << c
+      end
+    }
   end
 
   def content

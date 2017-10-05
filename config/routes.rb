@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :certificates
   get 'information/index'
 
   get 'slave/index'
