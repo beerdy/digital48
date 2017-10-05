@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'information/index'
+
   get 'slave/index'
 
   resources :group4s

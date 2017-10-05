@@ -5,8 +5,6 @@ class PagesController < ApplicationController
   # GET /pages.json
   def index
     render layout: false
-    @pages = Page.all
-
   end
 
   # GET /pages/1

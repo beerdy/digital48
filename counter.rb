@@ -1,4 +1,5 @@
 # encoding: UTF-8
+
 sum = 0
 file = File.new("tz.txt", "r")
 while (line = file.gets)

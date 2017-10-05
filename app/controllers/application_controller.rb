@@ -104,7 +104,7 @@ class ApplicationController < ActionController::Base
   def initialize
     super
     content
-
+    @aboutcompany = Page.where(url: 'aboutcompany').first
     @message = Message.new
   end
 
@@ -127,6 +127,8 @@ class ApplicationController < ActionController::Base
       @background_body = c if c.url == 'background_body'
       @mobile_background = c if c.url == 'mobile_background'
       @logo_baner = c if c.url == 'logo_baner'
+      @informationpage = c if c.url == 'informationpage'
+      @mapcompany = c if c.url == 'mapcompany'
     end
   end
 end

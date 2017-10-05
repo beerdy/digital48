@@ -1,8 +1,8 @@
-<section id="pageWrap">
+<section id="pageWrap" class='contact-company'>
+  <div class="page-header">
+    <span><a href="/">На главную</a> <strong> >> </strong> Диджитал Сервис</span>
+  </div>
   <div class="container">
-    <div class="page-header">
-      <span>Диджитал Сервис</span>
-    </div>
     <div class="page-text">
         <legend align="center"><h2 class="block-title">
           <span><b>Форма</b> Обратной связи</span> <small><a href="javascript:void(0);">Диджитал Сервис</a></small>
@@ -24,12 +24,14 @@
           <span><b>Мы</b> На карте</span> <small><a href="javascript:void(0);">Диджитал Сервис</a></small>
         </h2></legend>
         <div id="map">
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa2bacba970bdfe988363016fe90ef7d254bf7daaeea511592cfc9bd4e9c2f929&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+          <%=@mapcompany.description.html_safe%>
         </div>
         <legend align="center"><h2 class="block-title">
           <span><b>Реквизиты</b> Компании</span> <small><a href="javascript:void(0);">Диджитал Сервис</a></small>
         </h2></legend>
-        <%= @rekviziti.description.html_safe %>
+        <div class='rekvizit'>
+          <%= @rekviziti.description.html_safe %>
+        </div>
     </div>
   </div>
 </section>

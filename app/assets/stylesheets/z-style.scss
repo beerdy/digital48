@@ -45,6 +45,7 @@ hr {
 
 #sliderWrap {
   background-image: url(backslide.gif);
+  margin-top: 24px;
 }
 #preloader { 
   position: fixed; 
@@ -387,6 +388,13 @@ header {
   }
 }/*-- // TextWrap --*/
 
+/*-- About Company --*/
+#aboutcompany {
+  background-color: #F8F8F8;
+  .container {
+    background-color: #fff;
+  }
+}/*-- // About Company --*/
 
 /*-- Menu width --*/
 .cbp-hrmenu > ul > li > a {
@@ -453,6 +461,9 @@ table, td, tr {
 
 
 /*-- Clients --*/
+#clients {
+  background-color: #fff;
+}
 .client_url {
   .col-md-9 {
     text-align: center;
@@ -460,6 +471,54 @@ table, td, tr {
     font-size: 26px;
   }
 }/*-- // Clients --*/
+
+/*-- Information --*/
+#information  {
+  #pageWrap {
+    a::before {
+      content: "\f015\00A0\00A0";
+      font-family: FontAwesome;
+      color: #797979
+    }
+    border-bottom: 1px solid #2C6EBD;
+    strong {
+      color: #797979;
+    }
+    span {
+      text-decoration: underline;
+    }
+  }
+  .row {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background-color: #ffffff;
+  }
+  .col-md-4>ul>li>a,.col-md-4>ul>a {
+    color: blueviolet;
+    font-weight: 600;
+    font-size: 1.4em;
+  }
+}
+.map-heigth {
+  height: 424px;  
+}
+/*-- // Information --*/
+
+/*-- Contact company --*/
+.contact-company {
+  .page-header {
+    a::before {
+      content: "\f015\00A0\00A0";
+      font-family: FontAwesome;
+      color: #797979
+    }
+  }
+  .rekvizit {
+    padding: 24px;
+    background-color: #fff;
+  }
+}
+/*-- // Contact company --*/
 
 /*-- Footer --*/
 #footer {

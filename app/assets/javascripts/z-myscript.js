@@ -12,7 +12,12 @@ jQuery(document).ready(function($) {
   // init carusel
   $('.carousel').carousel();
   
-
+  // Start FLEXSlider
+  jQuery('.flexslider').flexslider({
+    animation: "slide"
+  });
+  // END FLEXSlider
+  
   // Menu
   cbpHorizontalMenu.init();
   // END Menu
@@ -23,7 +28,6 @@ jQuery(document).ready(function($) {
     animation: "slide"
   });
   // END FLEXSlider
-
 
 
   //preloader

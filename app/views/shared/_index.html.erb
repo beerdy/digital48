@@ -17,27 +17,9 @@
 <%end%>
 <hr style="border-bottom: 4px solid #47a3da;">
 
-<section id="sliderWrap">
-  <div class="container ">
-    <div id="metaslider" class="flexslider">
-      <ul class="slides">
-        <% Slider.all.each_with_index do |slide,index| %>
-        <%== if index==0 then '<li class="flex-active-slide">' else '<li class="">' end %>
-          <%= image_tag slide.image.url, alt: "slide1", class: "slider-38 slide-42", size: "1170x396", draggable: "true" %>
-          <div class="caption-wrap">
-            <div class="caption">
-              <%= slide.description.html_safe %>
-            </div>
-          </div>
-        </li>
-        <%end%>
-      </ul>
-    </div>
-  </div>
-</section>
 <section id="service">
   <div class="swrapper">
-    <div class="shead sec01"><p>&nbsp&nbsp<i class="fa fa-laptop" aria-hidden="true"></i>&nbsp&nbsp&nbspНАШИ УСЛУГИ&nbsp&nbsp</p></div>
+    <div class="shead service"><p>&nbsp&nbsp<i class="fa fa-laptop" aria-hidden="true"></i>&nbsp&nbsp&nbspНАШИ УСЛУГИ&nbsp&nbsp</p></div>
   </div>
   
   <div class="container-fluid">
@@ -56,6 +38,35 @@
     <%end%>
   </div>  
 </section>
+
+<section id="sliderWrap">
+  <div class="container ">
+    <div id="metaslider" class="flexslider">
+      <ul class="slides">
+        <% Slider.all.each_with_index do |slide,index| %>
+        <%== if index==0 then '<li class="flex-active-slide">' else '<li class="">' end %>
+          <%= image_tag slide.image.url, alt: "slide1", class: "slider-38 slide-42", size: "1170x396", draggable: "true" %>
+          <div class="caption-wrap">
+            <div class="caption">
+              <%= slide.description.html_safe %>
+            </div>
+          </div>
+        </li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id='aboutcompany'>
+  <div class="container margtop30 aboutcompany">
+    <legend><h2 class="block-title">
+      <span><b>О</b> Компании</span> <small><a href="javascript:void(0);">наши цели</a></small>
+    </h2></legend>
+    <%=@aboutcompany.description.html_safe%>
+  </div>
+</section>
+
 <!--
 <section id="slave-menu">
   <% render 'shared/slave_menu'%>
@@ -79,7 +90,14 @@
   </div>
 </section>
 
-
+<section id='mainContact'>
+  <div class="container margtop30">
+    <legend><h2 class="block-title messages">
+      <span><b>Наше</b> местоположение</span> <small><a href="/messages">реквизиты & схема проезда</a></small>
+    </h2></legend>
+  </div>
+  <div class="embed-responsive map-heigth"><iframe class="embed-responsive-item" src="/slave/index"></iframe></div>
+</section>
 
 <section id='clients'>
   <div class="container margbottom30 margtop30">
