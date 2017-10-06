@@ -23,7 +23,7 @@
         <h2>Сертификаты инженеров</h2>
         <hr>
         <div class='row'>
-        <%count=0;@cert_company.sort_by(&:sort).each do |cert| %>
+        <%count=0;@cert_people.sort_by(&:sort).each do |cert| %>
         <%= count>=4? (count=1;'</div><div class="row">'.html_safe) : (count+=1;'') %>
           <div class="col-sm-3">
             <%= image_tag cert.image.url, class: 'img-responsive gallery-img',alt: cert.title if cert.image_stored? %>
