@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171005164601) do
+ActiveRecord::Schema.define(version: 20171006001352) do
 
   create_table "certificates", force: :cascade do |t|
     t.string   "title"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20171005164601) do
     t.integer  "sort"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.text     "code"
   end
 
   create_table "group1s", force: :cascade do |t|

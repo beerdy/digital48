@@ -126,7 +126,7 @@
     </section>
   </section>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
-<% @footer.description.html_safe %>
+<%= @footer.description.html_safe if @enable_footer %>
 </section>
 </body>
 </html>

