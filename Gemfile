@@ -35,6 +35,7 @@ gem 'rails_admin', '~> 1.0'
 gem 'dragonfly', '~> 1.1.1'
 gem "font-awesome-rails"
 gem 'russian', '~> 0.6.0'
+gem 'owlcarousel-rails'
 
 gem 'rich', github: 'bastiaanterhorst/rich'
 gem 'paperclip'

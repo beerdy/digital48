@@ -1,0 +1,19 @@
+<% content_for :aside do %>
+  <!-- SIDE MENU -->
+  <aside class="header">
+    <div class="nav-side-menu">
+      <div class="brand"><a href="/"><i class="fa fa-home fa-lg"></i> <span>На главную</span></a></div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+        <div class="menu-list">
+          <ul class="menu-content collapse out" id="menu-content">
+            <% Client.all.each do |client|
+                names = client.title.split '>'
+                title = names[1].nil? ? names[0] : names[1] 
+            %>
+            <li class="<%== client.id.to_s==@client_active?'active':''%>" ><%= link_to title, '/projects/'+client.id.to_s%></li>
+            <%end%>
+          </ul>
+        </div>
+    </div>
+  </aside><!-- // SIDE MENU -->
+<%end%>

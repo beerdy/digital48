@@ -1,1 +1,6 @@
-<%= render 'shared/page' %>
+<% content_for :aside do %>
+  <%= render "shared/asidebarthred" %>
+  <section id="main-content">
+<% end %>
+
+<%= render "shared/page" %>

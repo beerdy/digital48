@@ -71,13 +71,37 @@
     <%end%>
     <div style="clear: both;padding-top: 24px;"></div>
     <%=@aboutcompany.description.html_safe%>
+    <div class="nice-buttons"><div class="buttons"><a class="btnn purple" onclick="return goTo('/information/index');">Информация</a></div></div>
+    <p>&nbsp</p>
   </div>
 </section>
 
-<!--
-<section id="slave-menu">
-  <% render 'shared/slave_menu'%>
-</section>-->
+
+<section id='projects'>
+  <div class="projects-block projects">
+    <legend><h2 class="block-title">
+      <span><b>Крупные</b> Проекты</span> <small><a href="/clients">реализованные проекты</a></small>
+    </h2></legend>
+    <div class="owl-carousel">
+      <% Client.all.each do |client| %>
+      <% if client.image_stored? %>
+      <div class="owl-element">
+        <div class="owl-paper">
+          <div class="img-warp">
+            <%= image_tag client.image.url, class: 'img-responsive', alt: 'title' %>
+          </div>
+          <div class="text-cap text-center"><span><%= client.slave %></span></div>
+          <div class="btn-cap nice-buttons">
+            <div class="buttons"><a class="btnn blue" onclick="return goTo('/projects/<%=client.id%>');">Подробнее</a></div>
+          </div>
+        </div>
+      </div>
+      <%end;end%>
+    </div>
+  </div>
+</section>
+
+
 <section id='utilize'>
   <div class="container margtop30">
     <legend><h2 class="block-title">

@@ -66,6 +66,7 @@ hr {
 .inner {
   //border-bottom: 2px solid #3A82B0;
 }
+
 h2 small {
   border-left: 1px solid #3A82B0;
   padding-left: 10px;
@@ -118,9 +119,7 @@ header {
     text-decoration: none; 
   }
 }
-.logo {
 
-}
 .form-control[type=submit] {
   background-color: #2C6EBD !important;
 }
@@ -322,6 +321,28 @@ header {
 
 
 }/* // -- service --*/
+
+
+
+/*-- Projects --*/
+#projects {
+  
+  .projects-block {
+    margin-top: 24px;
+    padding: 24px;
+    background-color: #fff;
+  }
+  .owl-element {
+    padding:7px;
+  }
+  .owl-paper {
+    padding: 7px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+  }
+
+}
+/*-- // Projects --*/
 
 
 

@@ -19,6 +19,8 @@ jQuery(document).ready(function($) {
   
   // init carusel
   $('.carousel').carousel();
+
+  $(".owl-carousel").owlCarousel();
   
   //preloader
   setTimeout(function(){
@@ -27,6 +29,23 @@ jQuery(document).ready(function($) {
   }, 1000);
   jQuery('#preloader').fadeOut('slow',function(){$(this).remove();});
   // END preloader
+
+
+
+  // Resize owl-carusel
+  funcresize();
+  function funcresize() {
+    var heights = $(".text-cap span").map(function() {
+        return $(this).height();
+    }).get(),
+    maxHeight = Math.max.apply(null, heights);
+    $(".text-cap").height(maxHeight);
+    
+  }
+
+  setTimeout(funcresize, 1000);
+  window.addEventListener("resize", func);
+  //END Resize owl-carusel
 
 
 });

@@ -1,18 +1,6 @@
-<%= render 'shared/page' %>
-<section id="pageWrap">
-  <div class="container">
+<% content_for :aside do %>
+  <%= render "shared/asidebarthred" %>
+  <section id="main-content">
+<% end %>
 
-    <div class="page-text">
-        <legend align="center"><h2 class="block-title">
-          <span><b>Реализованные </b> Проекты</span> <small><a href="javascript:void(0);">Список Проектов</a></small>
-        </h2></legend>
-        <% @clients.each do |client| %>
-          <div class="row client_url">
-            <div class="col-md-3"><%= image_tag client.image.url, alt: client.title, class: 'image-responsive' if client.image_stored? %></div>
-            <div class="col-md-9"><a onclick="return goTo('/projects/<%=client.id%>');"><%= client.slave %></a></div>
-          </div>
-        <%end%>
-    </div>
-  
-  </div>
-</section> 
+<%= render "shared/page" %>

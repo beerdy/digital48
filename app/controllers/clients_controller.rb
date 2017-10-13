@@ -7,6 +7,7 @@ class ClientsController < ApplicationController
   end
   def show
     @page = @client
+    @client_active = params[:id]
   end
   private
     # Use callbacks to share common setup or constraints between actions.
