@@ -39,6 +39,28 @@
   </div>  
 </section>
 
+<section id="flexSlider" class="margtop30">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <% Slider.all.each do |slide|%>
+                        <li>
+                            <%= image_tag slide.image.url if slide.image_stored? %>
+                            <% if slide.description and slide.description != '' then %>
+                              <div class="flex-caption">
+                                <%=slide.description.html_safe%>
+                              </div>
+                            <%end%>
+                        </li>
+                        <%end%>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!--
 <section id="sliderWrap">
   <div class="container ">
     <div id="metaslider" class="flexslider">
@@ -52,11 +74,11 @@
             </div>
           </div>
         </li>
-        <%end%>
+        <%end if 4==5%>
       </ul>
     </div>
   </div>
-</section>
+</section> -->
 
 <section id='aboutcompany' style="background-image: url(<%=@slogan.image.url if @slogan.image_stored?%>)">
   <div class="container margtop30 aboutcompany">

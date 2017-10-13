@@ -135,11 +135,13 @@ html[xmlns] .flexslider .slides {
   font-size: 1.8em;
   font-family: 'FontAwesome';
   content: '\f054';
+  color: #fff;
 }
 .flex-direction-nav a.flex-prev:before {
   font-size: 1.8em;
   font-family: 'FontAwesome';
   content: '\f053';
+  color: #fff;
 }
 .flex-direction-nav .flex-prev {
   left: -50px;

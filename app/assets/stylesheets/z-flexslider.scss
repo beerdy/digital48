@@ -1,0 +1,104 @@
+/***** Slider *****/
+
+.slider-container {
+    margin: 0 auto;
+    -moz-box-shadow: 0 -5px 15px 0 rgba(0,0,0,.05) inset;
+    -webkit-box-shadow: 0 -5px 15px 0 rgba(0,0,0,.05) inset;
+    box-shadow: 0 -5px 15px 0 rgba(0,0,0,.05) inset;
+}
+
+.slider {
+  padding: 0;
+  overflow: hidden;
+}
+
+.flexslider {
+    margin: 0;
+    background: none;
+    border: 0;
+    -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+}
+
+.flexslider .slides > li {
+  position: relative;
+}
+
+.flex-caption {
+    position: absolute;
+    left: 0;
+    width: 85%;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, .3);
+    color: #eaeaea;
+    text-align: left;
+    bottom: 50px;
+    h1 {
+      font-size: 4.0em;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 2.4em
+    }
+    li {
+      font-size: 2.0em;
+      list-style: circle;
+    }
+}
+
+
+.flex-direction-nav .flex-prev, .flex-direction-nav .flex-next {
+  text-align: center;
+  -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;
+}
+
+
+
+
+
+@media screen and (max-width: 1148px) {
+  .flex-caption {
+    bottom: 7px;
+    h1 {
+      font-size: 2.0em !important;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 1.0em
+    }
+    li {
+      font-size: 1.0em;
+      list-style: circle;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .flex-caption {
+    h1 {
+      font-size: 1.0em !important;
+      font-weight: normal;
+    }
+    li {
+      font-size: 0.8em;
+      list-style: circle;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .flex-caption {
+    bottom: 1px;
+    h1 {
+      font-size: 0.8em !important;
+      font-weight: normal;
+    }
+    h3 {
+      font-size: 0.8em;
+    }
+    li {
+      font-size: 0.8em;
+      list-style: circle;
+    }
+  }
+}
