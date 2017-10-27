@@ -107,7 +107,9 @@ class ApplicationController < ActionController::Base
     @aboutcompany = Page.where(url: 'aboutcompany').first
     @message = Message.new
     
-    cert_read( Certificate.all )
+    cert_read Certificate.all
+
+    @brands = for_sort({ :data => Brand.all, :default_sort => 99999 })
   end
 
   def cert_read data
@@ -121,6 +123,16 @@ class ApplicationController < ActionController::Base
         @cert_people << c
       end
     }
+  end
+
+
+  def for_sort options
+    sorted = []
+    options[:data].each do |value|
+      value.sort = options[:default_sort] if value.sort == nil
+      sorted << value
+    end
+    return sorted
   end
 
   def content

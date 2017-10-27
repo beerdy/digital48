@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171006001352) do
+ActiveRecord::Schema.define(version: 20171027125509) do
+
+  create_table "brands", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "slave"
+    t.string   "image_uid"
+    t.string   "image_name"
+    t.string   "url"
+    t.integer  "sort"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "image1_uid"
+    t.string   "image2_name"
+  end
 
   create_table "certificates", force: :cascade do |t|
     t.string   "title"

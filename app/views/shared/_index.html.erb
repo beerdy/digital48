@@ -17,11 +17,29 @@
 <%end%>
 <hr style="border-bottom: 4px solid #47a3da;">
 
+
+<section id="brands">
+  <div class="container">
+    <h1> Главный авторизированный сервисный центр в Липецке</h1>
+  </div>
+  <div class="row">
+    <% count = 0; @brands.each do |brand| %>
+    <%= count>=3? (count=1;'</div><div class="row">'.html_safe) : (count+=1;'') %>
+    <div class="col-md-4">
+      <div class="brand-warpaper">
+        <%= image_tag brand.image1.url, alt: brand.title, class:"img-responsive img-nocolor" if brand.image1_stored? %>
+        <%= image_tag brand.image.url, alt: brand.title, class:"img-responsive img-color" if brand.image_stored? %>
+      </div>
+    </div>
+    <%end%>
+  </div>
+</section>
+
 <section id="service">
   <div class="swrapper">
     <div class="shead service"><p>&nbsp&nbsp<i class="fa fa-laptop" aria-hidden="true"></i>&nbsp&nbsp&nbspНАШИ УСЛУГИ&nbsp&nbsp</p></div>
   </div>
-  
+  <a href="http://digital48.ru/pages/chastpc#repair"></a>
   <div class="container-fluid">
     <% @count = 0; @master_group.each do |group1| %>
     <%= @count>=3? (@count=1;'</div><div class="row">'.html_safe) : (@count+=1;'') %>
