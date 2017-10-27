@@ -4,7 +4,7 @@
 <%= image_tag @mobile_background.image.url, alt: @mobile_background.title, class: 'mobile_background img-responsive'  %>
 </div>
 <%else%>
-<iframe id="myiFrame" src="/pages" style="border:0px;-webkit-overflow-scrolling: touch;overflow: auto; margin: 0px; padding: 0px;" scrolling="no" width="100%"></iframe>
+<iframe id="myiFrame" src="/pages" style="border:0px;-webkit-overflow-scrolling: touch;overflow: auto; margin: 0px; padding: 0px; background-color: <%=@slogan.code%>" scrolling="no" width="100%"></iframe>
 <div class="hero">
   <div class="logo-baner"><%= image_tag @logo_baner.image.url, alt: @logo_baner.title, class: 'img-responsive' %></div>
   <h1><span>Авторизированная сервисная компания</span><br>Мы ценим Ваше время</h1>
