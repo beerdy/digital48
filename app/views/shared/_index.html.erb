@@ -147,9 +147,9 @@
       <span><b>Программа</b> Утилизации</span> <small><a href="javascript:void(0);">утилизируем технику</a></small>
     </h2></legend>
     <%=@utilize.title.html_safe%>
-    <div class="row margtop30">
-      <div class="col-sm-6 utilize"><%=image_tag @utilize.image.url, class: 'img-responsive gallery-img', alt: @utilize.title %></div>
-      <div class="col-sm-6 nice-buttons">
+    <div class="row ">
+      <div class="col-md-6"><div class="utilize"><%=image_tag @utilize.image.url, class: 'img-responsive gallery-img', alt: @utilize.title %></div></div>
+      <div class="col-md-6 nice-buttons">
         <div class="margtop70"><%=@utilize.description.html_safe%></div>
         <div class="buttons">
           <a class="btnn blue" onclick="return goTo('/pages/utilize');">Подробнее</a>
