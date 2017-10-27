@@ -118,9 +118,9 @@
 
 <section id='projects'>
   <div class="projects-block projects">
-    <legend><h2 class="block-title">
+    <div class="container"><legend><h2 class="block-title">
       <span><b>Крупные</b> Проекты</span> <small><a href="/clients">реализованные проекты</a></small>
-    </h2></legend>
+    </h2></legend></div>
     <div class="owl-carousel">
       <% Client.all.each do |client| %>
       <% if client.image_stored? %>
