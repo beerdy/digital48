@@ -19,17 +19,19 @@
 
 
 <section id="brands">
-  <div class="container text">
+  <div class="container text-center">
     <h1>Главный авторизированный сервисный центр в Липецке</h1>
   </div>
   <div class="row">
     <% count = 0; @brands.each do |brand| %>
     <%= count>=3? (count=1;'</div><div class="row">'.html_safe) : (count+=1;'') %>
     <div class="col-md-4">
+      <a href="<%=brand.url%>" target="_blank">
       <div class="brand-warpaper">
         <%= image_tag brand.image1.url, alt: brand.title, class:"img-responsive img-nocolor" if brand.image1_stored? %>
         <%= image_tag brand.image.url, alt: brand.title, class:"img-responsive img-color" if brand.image_stored? %>
       </div>
+      </a>
     </div>
     <%end%>
   </div>
