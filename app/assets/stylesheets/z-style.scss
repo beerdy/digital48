@@ -176,52 +176,6 @@ header {
   .img-nocolor:hover, .img-nocolor:focus {
     opacity: 0;
   }
-}
-
-#brands {
-  .brand {
-  display: inline-block;
-  position: relative;
-  width: 300px;
-  height: 185px;
-  margin: 1.5em .5em 0;
-  border-radius: 1em;  
-  text-align: left;
-  transition: all .5s;
-  
-  &--before:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: inherit; 
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: all .5s;
-    }
-    
-  &:after {
-    content: attr(data-name);
-    position: absolute;
-    top: -1.5em;
-    left: .5em;
-    }
-  }
-.brand--luminosity {
-  background-color: steelblue;
-  background-blend-mode: luminosity;
-  }
-
-.brand--trans:hover {
-  background-blend-mode: normal;
-  }
-.brand--before:hover:before {
-  opacity: 1;
-  }
 }/* END-- Brand -- */
 
 
