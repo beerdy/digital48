@@ -23,7 +23,7 @@
     <h1>Главный авторизированный сервисный центр в Липецке</h1>
   </div>
   <div class="row">
-    <% count = 0; @brands.each do |brand| %>
+    <% count = 0; @brands.sort_by(&:sort).each do |brand| %>
     <%= count>=3? (count=1;'</div><div class="row">'.html_safe) : (count+=1;'') %>
     <div class="col-md-4">
       <a href="<%=brand.url%>" target="_blank">
